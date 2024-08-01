@@ -1,0 +1,14 @@
+age,hasAge
+sex,hasGender
+cp,hasChestPain
+trestbps,hasBloodPressure
+chol,hasSerumCholestoral
+fbs,hasFastingBloodSugarGreaterThan120
+restecg,hasRestingElectrocardiographicResults
+thalach,hasMaximumHeartRateAchieved
+exang,hasExerciseInducedAngina
+oldpeak,hasSTDepressionInducedByExercise
+slope,hasSlopePeakExerciseSTSegment
+ca,hasMajorVesselsColoredByFlourosopy
+thal,hasHeartRate
+label,hasHeartDisease

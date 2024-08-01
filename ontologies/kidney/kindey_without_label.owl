@@ -1,0 +1,1281 @@
+Prefix(:=<owlapi:ontology#ont1#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<owlapi:ontology#ont1>
+
+Declaration(Class(<http://snomed.info/id/102576009>))
+Declaration(Class(<http://snomed.info/id/104934005>))
+Declaration(Class(<http://snomed.info/id/105590001>))
+Declaration(Class(<http://snomed.info/id/113075003>))
+Declaration(Class(<http://snomed.info/id/113257007>))
+Declaration(Class(<http://snomed.info/id/113331007>))
+Declaration(Class(<http://snomed.info/id/116154003>))
+Declaration(Class(<http://snomed.info/id/119297000>))
+Declaration(Class(<http://snomed.info/id/119351004>))
+Declaration(Class(<http://snomed.info/id/119364003>))
+Declaration(Class(<http://snomed.info/id/11953005>))
+Declaration(Class(<http://snomed.info/id/12222001>))
+Declaration(Class(<http://snomed.info/id/122865005>))
+Declaration(Class(<http://snomed.info/id/123037004>))
+Declaration(Class(<http://snomed.info/id/123038009>))
+Declaration(Class(<http://snomed.info/id/1250004>))
+Declaration(Class(<http://snomed.info/id/126877002>))
+Declaration(Class(<http://snomed.info/id/127325009>))
+Declaration(Class(<http://snomed.info/id/128927009>))
+Declaration(Class(<http://snomed.info/id/129264002>))
+Declaration(Class(<http://snomed.info/id/129265001>))
+Declaration(Class(<http://snomed.info/id/129266000>))
+Declaration(Class(<http://snomed.info/id/138875005>))
+Declaration(Class(<http://snomed.info/id/14089001>))
+Declaration(Class(<http://snomed.info/id/161825005>))
+Declaration(Class(<http://snomed.info/id/170550007>))
+Declaration(Class(<http://snomed.info/id/17621005>))
+Declaration(Class(<http://snomed.info/id/23573002>))
+Declaration(Class(<http://snomed.info/id/243796009>))
+Declaration(Class(<http://snomed.info/id/243851009>))
+Declaration(Class(<http://snomed.info/id/250231008>))
+Declaration(Class(<http://snomed.info/id/250435001>))
+Declaration(Class(<http://snomed.info/id/250623007>))
+Declaration(Class(<http://snomed.info/id/252294009>))
+Declaration(Class(<http://snomed.info/id/260379002>))
+Declaration(Class(<http://snomed.info/id/26758005>))
+Declaration(Class(<http://snomed.info/id/271737000>))
+Declaration(Class(<http://snomed.info/id/272099008>))
+Declaration(Class(<http://snomed.info/id/274080003>))
+Declaration(Class(<http://snomed.info/id/275765006>))
+Declaration(Class(<http://snomed.info/id/281300000>))
+Declaration(Class(<http://snomed.info/id/289162002>))
+Declaration(Class(<http://snomed.info/id/301830001>))
+Declaration(Class(<http://snomed.info/id/303118004>))
+Declaration(Class(<http://snomed.info/id/304372009>))
+Declaration(Class(<http://snomed.info/id/30766002>))
+Declaration(Class(<http://snomed.info/id/310611001>))
+Declaration(Class(<http://snomed.info/id/33468001>))
+Declaration(Class(<http://snomed.info/id/33747003>))
+Declaration(Class(<http://snomed.info/id/33911006>))
+Declaration(Class(<http://snomed.info/id/362981000>))
+Declaration(Class(<http://snomed.info/id/363787002>))
+Declaration(Class(<http://snomed.info/id/364645004>))
+Declaration(Class(<http://snomed.info/id/364663004>))
+Declaration(Class(<http://snomed.info/id/365630000>))
+Declaration(Class(<http://snomed.info/id/365757006>))
+Declaration(Class(<http://snomed.info/id/365812005>))
+Declaration(Class(<http://snomed.info/id/36969009>))
+Declaration(Class(<http://snomed.info/id/373668001>))
+Declaration(Class(<http://snomed.info/id/38082009>))
+Declaration(Class(<http://snomed.info/id/385658003>))
+Declaration(Class(<http://snomed.info/id/386053000>))
+Declaration(Class(<http://snomed.info/id/387092000>))
+Declaration(Class(<http://snomed.info/id/397669002>))
+Declaration(Class(<http://snomed.info/id/39972003>))
+Declaration(Class(<http://snomed.info/id/404684003>))
+Declaration(Class(<http://snomed.info/id/405039009>))
+Declaration(Class(<http://snomed.info/id/409774005>))
+Declaration(Class(<http://snomed.info/id/409822003>))
+Declaration(Class(<http://snomed.info/id/410513005>))
+Declaration(Class(<http://snomed.info/id/410604004>))
+Declaration(Class(<http://snomed.info/id/410607006>))
+Declaration(Class(<http://snomed.info/id/414022008>))
+Declaration(Class(<http://snomed.info/id/41898006>))
+Declaration(Class(<http://snomed.info/id/428375006>))
+Declaration(Class(<http://snomed.info/id/441689006>))
+Declaration(Class(<http://snomed.info/id/441862004>))
+Declaration(Class(<http://snomed.info/id/46190003>))
+Declaration(Class(<http://snomed.info/id/48176007>))
+Declaration(Class(<http://snomed.info/id/52454007>))
+Declaration(Class(<http://snomed.info/id/55304007>))
+Declaration(Class(<http://snomed.info/id/56459004>))
+Declaration(Class(<http://snomed.info/id/59573005>))
+Declaration(Class(<http://snomed.info/id/64033007>))
+Declaration(Class(<http://snomed.info/id/64379006>))
+Declaration(Class(<http://snomed.info/id/64572001>))
+Declaration(Class(<http://snomed.info/id/67079006>))
+Declaration(Class(<http://snomed.info/id/69285004>))
+Declaration(Class(<http://snomed.info/id/704180000>))
+Declaration(Class(<http://snomed.info/id/709044004>))
+Declaration(Class(<http://snomed.info/id/71388002>))
+Declaration(Class(<http://snomed.info/id/719033000>))
+Declaration(Class(<http://snomed.info/id/719984002>))
+Declaration(Class(<http://snomed.info/id/722243006>))
+Declaration(Class(<http://snomed.info/id/723066005>))
+Declaration(Class(<http://snomed.info/id/73211009>))
+Declaration(Class(<http://snomed.info/id/75367002>))
+Declaration(Class(<http://snomed.info/id/767002>))
+Declaration(Class(<http://snomed.info/id/79654002>))
+Declaration(Class(<http://snomed.info/id/80943009>))
+Declaration(Class(<http://snomed.info/id/88480006>))
+Declaration(Class(<http://snomed.info/id/89615005>))
+Declaration(Class(<http://snomed.info/id/90734009>))
+Declaration(Class(<http://www.semanticweb.org/hepatitis_ontology#Abnormal>))
+Declaration(Class(<http://www.semanticweb.org/hepatitis_ontology#BA_Notpresent>))
+Declaration(Class(<http://www.semanticweb.org/hepatitis_ontology#BA_Present>))
+Declaration(Class(<http://www.semanticweb.org/hepatitis_ontology#Good_Appetite>))
+Declaration(Class(<http://www.semanticweb.org/hepatitis_ontology#Normal>))
+Declaration(Class(<http://www.semanticweb.org/hepatitis_ontology#PCC_Notpresent>))
+Declaration(Class(<http://www.semanticweb.org/hepatitis_ontology#PCC_Present>))
+Declaration(Class(<http://www.semanticweb.org/hepatitis_ontology#PC_Abnormal>))
+Declaration(Class(<http://www.semanticweb.org/hepatitis_ontology#PC_Normal>))
+Declaration(Class(<http://www.semanticweb.org/hepatitis_ontology#Poor_Appetite>))
+Declaration(ObjectProperty(<http://snomed.info/id/116676008>))
+Declaration(ObjectProperty(<http://snomed.info/id/116686009>))
+Declaration(ObjectProperty(<http://snomed.info/id/246075003>))
+Declaration(ObjectProperty(<http://snomed.info/id/246093002>))
+Declaration(ObjectProperty(<http://snomed.info/id/260686004>))
+Declaration(ObjectProperty(<http://snomed.info/id/263502005>))
+Declaration(ObjectProperty(<http://snomed.info/id/363589002>))
+Declaration(ObjectProperty(<http://snomed.info/id/363698007>))
+Declaration(ObjectProperty(<http://snomed.info/id/363713009>))
+Declaration(ObjectProperty(<http://snomed.info/id/363714003>))
+Declaration(ObjectProperty(<http://snomed.info/id/370130000>))
+Declaration(ObjectProperty(<http://snomed.info/id/370132008>))
+Declaration(ObjectProperty(<http://snomed.info/id/370135005>))
+Declaration(ObjectProperty(<http://snomed.info/id/408730004>))
+Declaration(ObjectProperty(<http://snomed.info/id/408731000>))
+Declaration(ObjectProperty(<http://snomed.info/id/408732007>))
+Declaration(ObjectProperty(<http://snomed.info/id/47429007>))
+Declaration(ObjectProperty(<http://snomed.info/id/609096000>))
+Declaration(ObjectProperty(<http://snomed.info/id/704319004>))
+Declaration(ObjectProperty(<http://snomed.info/id/704321009>))
+Declaration(ObjectProperty(<http://snomed.info/id/738774007>))
+Declaration(ObjectProperty(<http://snomed.info/id/762705008>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/hepatitis_ontology#hasBacteria>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/hepatitis_ontology#hasHypertension>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/hepatitis_ontology#hasPusCell>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/hepatitis_ontology#hasPusCellsUrine>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/hepatitis_ontology#hasRedBloodCell>))
+Declaration(DataProperty(<http://www.semanticweb.org/hepatitis_ontology#hasAge>))
+Declaration(DataProperty(<http://www.semanticweb.org/hepatitis_ontology#hasAlbumin>))
+Declaration(DataProperty(<http://www.semanticweb.org/hepatitis_ontology#hasBloodPressure>))
+Declaration(DataProperty(<http://www.semanticweb.org/hepatitis_ontology#hasCoronaryArteryDisease>))
+Declaration(DataProperty(<http://www.semanticweb.org/hepatitis_ontology#hasDiabetesMellitus>))
+Declaration(DataProperty(<http://www.semanticweb.org/hepatitis_ontology#hasHypertensionValue>))
+Declaration(DataProperty(<http://www.semanticweb.org/hepatitis_ontology#hasSpecificGravity>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#altLabel>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#definition>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#prefLabel>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://snomed.info/id/116676008> (Associated morphology (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/116676008> "Associated morphology (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/116676008> "Morphology"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/116676008> "Associated morphology"@en)
+SubObjectPropertyOf(<http://snomed.info/id/116676008> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/116686009> (Has specimen (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/116686009> "Has specimen (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/116686009> "Has specimen"@en)
+SubObjectPropertyOf(<http://snomed.info/id/116686009> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/246075003> (Causative agent (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/246075003> "Causative agent (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/246075003> "Causative agent"@en)
+SubObjectPropertyOf(<http://snomed.info/id/246075003> <http://snomed.info/id/47429007>)
+
+# Object Property: <http://snomed.info/id/246093002> (Component (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/246093002> "Component (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/246093002> "Component"@en)
+SubObjectPropertyOf(<http://snomed.info/id/246093002> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/260686004> (Method (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/260686004> "Method (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/260686004> "Method"@en)
+SubObjectPropertyOf(<http://snomed.info/id/260686004> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/263502005> (Clinical course (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/263502005> "Clinical course (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/263502005> "Clinical course"@en)
+SubObjectPropertyOf(<http://snomed.info/id/263502005> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/363589002> (Associated procedure (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/363589002> "Associated procedure (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/363589002> "Associated procedure"@en)
+SubObjectPropertyOf(<http://snomed.info/id/363589002> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/363698007> (Finding site (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/363698007> "Finding site (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/363698007> "Finding site"@en)
+SubObjectPropertyOf(<http://snomed.info/id/363698007> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/363713009> (Has interpretation (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/363713009> "Has interpretation (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/363713009> "Has interpretation"@en)
+SubObjectPropertyOf(<http://snomed.info/id/363713009> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/363714003> (Interprets (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/363714003> "Interprets (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/363714003> "Interprets"@en)
+SubObjectPropertyOf(<http://snomed.info/id/363714003> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/370130000> (Property (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/370130000> "Property (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://snomed.info/id/370130000> "This attribute is used to specify the type of inherent quality, function, disposition or process characteristic that is being observed or measured. Its values are abstract types of quality (length, odor, concentration) or abstract types of process characteristic (rate, speed, duration), and do not include qualities that are located (length of arm, odor of urine), or given a value (elevated concentration)."@en-us)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://snomed.info/id/370130000> "This attribute is used to specify the type of inherent quality, function, disposition or process characteristic that is being observed or measured. Its values are abstract types of quality (length, odour, concentration) or abstract types of process characteristic (rate, speed, duration), and do not include qualities that are located (length of arm, odour of urine), or given a value (elevated concentration)."@en-gb)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/370130000> "Property"@en)
+SubObjectPropertyOf(<http://snomed.info/id/370130000> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/370132008> (Scale type (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/370132008> "Scale type (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://snomed.info/id/370132008> "This attribute refers to the scale of the result of an observation or a diagnostic test."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/370132008> "Scale type"@en)
+SubObjectPropertyOf(<http://snomed.info/id/370132008> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/370135005> (Pathological process (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/370135005> "Pathological process (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/370135005> "Pathological process"@en)
+SubObjectPropertyOf(<http://snomed.info/id/370135005> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/408730004> (Procedure context (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/408730004> "Procedure context (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/408730004> "Procedure context"@en)
+SubObjectPropertyOf(<http://snomed.info/id/408730004> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/408731000> (Temporal context (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/408731000> "Temporal context (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/408731000> "Temporal context"@en)
+SubObjectPropertyOf(<http://snomed.info/id/408731000> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/408732007> (Subject relationship context (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/408732007> "Subject relationship context (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/408732007> "Subject relationship context"@en)
+SubObjectPropertyOf(<http://snomed.info/id/408732007> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/47429007> (Associated with (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/47429007> "Associated with (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/47429007> "Associated with"@en)
+SubObjectPropertyOf(<http://snomed.info/id/47429007> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/609096000> (Role group (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/609096000> "Role group (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/609096000> "Role group"@en)
+SubObjectPropertyOf(<http://snomed.info/id/609096000> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/704319004> (Inheres in (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/704319004> "Inheres in (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://snomed.info/id/704319004> "This attribute specifies the independent continuant which bears the quality, and on which the dependent quality (of this observable) depends."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/704319004> "Inheres in"@en)
+SubObjectPropertyOf(<http://snomed.info/id/704319004> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/704321009> (Characterizes (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/704321009> "Characterizes (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://snomed.info/id/704321009> "This attribute specifies the process which the property describes, and on which the property (of this observable) depends. The process can be very general."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/704321009> "Characterizes"@en)
+SubObjectPropertyOf(<http://snomed.info/id/704321009> <http://snomed.info/id/762705008>)
+
+# Object Property: <http://snomed.info/id/738774007> (Is modification of (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/738774007> "Is modification of (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://snomed.info/id/738774007> "This attribute indicates that the concept is a structural modification of another concept."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/738774007> "Is modification of"@en)
+TransitiveObjectProperty(<http://snomed.info/id/738774007>)
+ReflexiveObjectProperty(<http://snomed.info/id/738774007>)
+
+# Object Property: <http://snomed.info/id/762705008> (Concept model object attribute (attribute))
+
+AnnotationAssertion(rdfs:label <http://snomed.info/id/762705008> "Concept model object attribute (attribute)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/762705008> "Concept model object attribute"@en)
+
+# Object Property: <http://www.semanticweb.org/hepatitis_ontology#hasBacteria> (<http://www.semanticweb.org/hepatitis_ontology#hasBacteria>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/hepatitis_ontology#hasBacteria> <http://snomed.info/id/116154003>)
+ObjectPropertyRange(<http://www.semanticweb.org/hepatitis_ontology#hasBacteria> <http://snomed.info/id/274080003>)
+
+# Object Property: <http://www.semanticweb.org/hepatitis_ontology#hasHypertension> (<http://www.semanticweb.org/hepatitis_ontology#hasHypertension>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/hepatitis_ontology#hasHypertension> <http://snomed.info/id/116154003>)
+ObjectPropertyRange(<http://www.semanticweb.org/hepatitis_ontology#hasHypertension> <http://snomed.info/id/704180000>)
+
+# Object Property: <http://www.semanticweb.org/hepatitis_ontology#hasPusCell> (<http://www.semanticweb.org/hepatitis_ontology#hasPusCell>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/hepatitis_ontology#hasPusCell> <http://snomed.info/id/116154003>)
+ObjectPropertyRange(<http://www.semanticweb.org/hepatitis_ontology#hasPusCell> <http://snomed.info/id/373668001>)
+
+# Object Property: <http://www.semanticweb.org/hepatitis_ontology#hasPusCellsUrine> (<http://www.semanticweb.org/hepatitis_ontology#hasPusCellsUrine>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/hepatitis_ontology#hasPusCellsUrine> <http://snomed.info/id/116154003>)
+ObjectPropertyRange(<http://www.semanticweb.org/hepatitis_ontology#hasPusCellsUrine> <http://snomed.info/id/275765006>)
+
+# Object Property: <http://www.semanticweb.org/hepatitis_ontology#hasRedBloodCell> (<http://www.semanticweb.org/hepatitis_ontology#hasRedBloodCell>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/hepatitis_ontology#hasRedBloodCell> <http://snomed.info/id/116154003>)
+ObjectPropertyRange(<http://www.semanticweb.org/hepatitis_ontology#hasRedBloodCell> <http://snomed.info/id/55304007>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://www.semanticweb.org/hepatitis_ontology#hasAge> (<http://www.semanticweb.org/hepatitis_ontology#hasAge>)
+
+DataPropertyDomain(<http://www.semanticweb.org/hepatitis_ontology#hasAge> <http://snomed.info/id/116154003>)
+DataPropertyRange(<http://www.semanticweb.org/hepatitis_ontology#hasAge> xsd:int)
+
+# Data Property: <http://www.semanticweb.org/hepatitis_ontology#hasAlbumin> (<http://www.semanticweb.org/hepatitis_ontology#hasAlbumin>)
+
+DataPropertyDomain(<http://www.semanticweb.org/hepatitis_ontology#hasAlbumin> <http://snomed.info/id/116154003>)
+DataPropertyRange(<http://www.semanticweb.org/hepatitis_ontology#hasAlbumin> xsd:float)
+
+# Data Property: <http://www.semanticweb.org/hepatitis_ontology#hasBloodPressure> (<http://www.semanticweb.org/hepatitis_ontology#hasBloodPressure>)
+
+DataPropertyDomain(<http://www.semanticweb.org/hepatitis_ontology#hasBloodPressure> <http://snomed.info/id/116154003>)
+DataPropertyRange(<http://www.semanticweb.org/hepatitis_ontology#hasBloodPressure> xsd:float)
+
+# Data Property: <http://www.semanticweb.org/hepatitis_ontology#hasCoronaryArteryDisease> (<http://www.semanticweb.org/hepatitis_ontology#hasCoronaryArteryDisease>)
+
+DataPropertyDomain(<http://www.semanticweb.org/hepatitis_ontology#hasCoronaryArteryDisease> <http://snomed.info/id/116154003>)
+DataPropertyRange(<http://www.semanticweb.org/hepatitis_ontology#hasCoronaryArteryDisease> xsd:boolean)
+
+# Data Property: <http://www.semanticweb.org/hepatitis_ontology#hasDiabetesMellitus> (<http://www.semanticweb.org/hepatitis_ontology#hasDiabetesMellitus>)
+
+DataPropertyDomain(<http://www.semanticweb.org/hepatitis_ontology#hasDiabetesMellitus> <http://snomed.info/id/116154003>)
+DataPropertyRange(<http://www.semanticweb.org/hepatitis_ontology#hasDiabetesMellitus> xsd:boolean)
+
+# Data Property: <http://www.semanticweb.org/hepatitis_ontology#hasHypertensionValue> (<http://www.semanticweb.org/hepatitis_ontology#hasHypertensionValue>)
+
+DataPropertyDomain(<http://www.semanticweb.org/hepatitis_ontology#hasHypertensionValue> <http://snomed.info/id/704180000>)
+DataPropertyRange(<http://www.semanticweb.org/hepatitis_ontology#hasHypertensionValue> xsd:boolean)
+
+# Data Property: <http://www.semanticweb.org/hepatitis_ontology#hasSpecificGravity> (<http://www.semanticweb.org/hepatitis_ontology#hasSpecificGravity>)
+
+DataPropertyDomain(<http://www.semanticweb.org/hepatitis_ontology#hasSpecificGravity> <http://snomed.info/id/116154003>)
+DataPropertyRange(<http://www.semanticweb.org/hepatitis_ontology#hasSpecificGravity> xsd:float)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://snomed.info/id/102576009> (Edema of foot (finding))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/102576009> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/102576009> "Edema of foot (finding)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/102576009> "Foot edema"@en-us)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/102576009> "Foot oedema"@en-gb)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/102576009> "Pedal edema"@en-us)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/102576009> "Pedal oedema"@en-gb)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/102576009> "Edema of foot"@en-us)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/102576009> "Oedema of foot"@en-gb)
+EquivalentClasses(<http://snomed.info/id/102576009> ObjectIntersectionOf(<http://snomed.info/id/404684003> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://snomed.info/id/116676008> <http://snomed.info/id/79654002>) ObjectSomeValuesFrom(<http://snomed.info/id/363698007> <http://snomed.info/id/56459004>)))))
+
+# Class: <http://snomed.info/id/104934005> (Sodium measurement, serum (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/104934005> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/104934005> "Sodium measurement, serum (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/104934005> "Serum sodium"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/104934005> "Serum sodium level"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/104934005> "Sodium measurement, serum"@en)
+EquivalentClasses(<http://snomed.info/id/104934005> ObjectIntersectionOf(<http://snomed.info/id/71388002> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/116686009> <http://snomed.info/id/119364003>)) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/246093002> <http://snomed.info/id/39972003>)) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/260686004> <http://snomed.info/id/129266000>))))
+
+# Class: <http://snomed.info/id/105590001> (Substance (substance))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/105590001> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/105590001> "Substance (substance)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/105590001> "Substances"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/105590001> "Substance"@en)
+SubClassOf(<http://snomed.info/id/105590001> <http://snomed.info/id/138875005>)
+
+# Class: <http://snomed.info/id/113075003> (Creatinine measurement, serum (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/113075003> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/113075003> "Creatinine measurement, serum (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/113075003> "Serum creatinine"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/113075003> "Creatinine measurement, serum"@en)
+SubClassOf(<http://snomed.info/id/113075003> <http://snomed.info/id/386053000>)
+
+# Class: <http://snomed.info/id/113257007> (Structure of cardiovascular system (body structure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/113257007> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/113257007> "Structure of cardiovascular system (body structure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/113257007> "Cardiovascular structure"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/113257007> "Cardiovascular system"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/113257007> "Circulatory system"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/113257007> "Structure of cardiovascular system"@en)
+SubClassOf(<http://snomed.info/id/113257007> <http://snomed.info/id/123037004>)
+
+# Class: <http://snomed.info/id/113331007> (Structure of endocrine system (body structure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/113331007> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/113331007> "Structure of endocrine system (body structure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/113331007> "Endocrine structure"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/113331007> "Endocrine system"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/113331007> "Endocrine system structure"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/113331007> "Structure of endocrine system"@en)
+SubClassOf(<http://snomed.info/id/113331007> <http://snomed.info/id/123037004>)
+
+# Class: <http://snomed.info/id/116154003> (Patient (person))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/116154003> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/116154003> "Patient (person)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/116154003> "Patient"@en)
+SubClassOf(<http://snomed.info/id/116154003> <http://snomed.info/id/303118004>)
+
+# Class: <http://snomed.info/id/119297000> (Blood specimen (specimen))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/119297000> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/119297000> "Blood specimen (specimen)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/119297000> "Blood sample"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/119297000> "Blood specimen"@en)
+SubClassOf(<http://snomed.info/id/119297000> <http://snomed.info/id/123038009>)
+
+# Class: <http://snomed.info/id/119351004> (Erythrocyte specimen (specimen))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/119351004> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/119351004> "Erythrocyte specimen (specimen)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/119351004> "Red blood cell sample"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/119351004> "Erythrocyte specimen"@en)
+SubClassOf(<http://snomed.info/id/119351004> <http://snomed.info/id/123038009>)
+
+# Class: <http://snomed.info/id/119364003> (Serum specimen (specimen))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/119364003> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/119364003> "Serum specimen (specimen)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/119364003> "Serum sample"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/119364003> "Serum specimen"@en)
+SubClassOf(<http://snomed.info/id/119364003> <http://snomed.info/id/119297000>)
+
+# Class: <http://snomed.info/id/11953005> (Renal function (observable entity))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/11953005> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/11953005> "Renal function (observable entity)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/11953005> "Renal function"@en)
+SubClassOf(<http://snomed.info/id/11953005> <http://snomed.info/id/363787002>)
+
+# Class: <http://snomed.info/id/12222001> (Abnormality of red blood cells (morphologic abnormality))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/12222001> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/12222001> "Abnormality of red blood cells (morphologic abnormality)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/12222001> "Abnormal erythrocyte"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/12222001> "Erythrocyte abnormality"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/12222001> "Abnormality of red blood cells"@en)
+EquivalentClasses(<http://snomed.info/id/12222001> <http://www.semanticweb.org/hepatitis_ontology#Abnormal>)
+SubClassOf(<http://snomed.info/id/12222001> <http://snomed.info/id/89615005>)
+
+# Class: <http://snomed.info/id/122865005> (Gastrointestinal tract structure (body structure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/122865005> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/122865005> "Gastrointestinal tract structure (body structure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/122865005> "Gastrointestinal tract"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://snomed.info/id/122865005> "Esophagus, stomach, small intestine and large intestine together as a single entity."@en-us)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://snomed.info/id/122865005> "Oesophagus, stomach, small intestine and large intestine together as a single entity."@en-gb)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/122865005> "Gastrointestinal tract structure"@en)
+SubClassOf(<http://snomed.info/id/122865005> <http://snomed.info/id/123037004>)
+
+# Class: <http://snomed.info/id/123037004> (Body structure (body structure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/123037004> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/123037004> "Body structure (body structure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/123037004> "Body structures"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/123037004> "Body structure"@en)
+SubClassOf(<http://snomed.info/id/123037004> <http://snomed.info/id/138875005>)
+
+# Class: <http://snomed.info/id/123038009> (Specimen (specimen))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/123038009> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/123038009> "Specimen (specimen)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://snomed.info/id/123038009> "Material (structure, substance, device) removed from a source (patient, donor, physical location, product)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/123038009> "Specimen"@en)
+SubClassOf(<http://snomed.info/id/123038009> <http://snomed.info/id/138875005>)
+
+# Class: <http://snomed.info/id/1250004> (Decreased (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/1250004> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/1250004> "Decreased (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/1250004> "Decreased by"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/1250004> "Diminished"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/1250004> "Decreased"@en)
+SubClassOf(<http://snomed.info/id/1250004> <http://snomed.info/id/362981000>)
+
+# Class: <http://snomed.info/id/126877002> (Disorder of glucose metabolism (disorder))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/126877002> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/126877002> "Disorder of glucose metabolism (disorder)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/126877002> "Disorder of glucose metabolism"@en)
+SubClassOf(<http://snomed.info/id/126877002> <http://snomed.info/id/64572001>)
+
+# Class: <http://snomed.info/id/127325009> (Procedure related finding (finding))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/127325009> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/127325009> "Procedure related finding (finding)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/127325009> "Procedure related finding"@en)
+SubClassOf(<http://snomed.info/id/127325009> <http://snomed.info/id/404684003>)
+
+# Class: <http://snomed.info/id/128927009> (Procedure by method (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/128927009> "Supporting concept (with definition)")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/128927009> "Procedure by method (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/128927009> "Procedure by method"@en)
+EquivalentClasses(<http://snomed.info/id/128927009> ObjectIntersectionOf(<http://snomed.info/id/71388002> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/260686004> <http://snomed.info/id/129264002>))))
+
+# Class: <http://snomed.info/id/129264002> (Action (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/129264002> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/129264002> "Action (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/129264002> "Clinical action"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/129264002> "Clinical actions"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/129264002> "Action"@en)
+SubClassOf(<http://snomed.info/id/129264002> <http://snomed.info/id/362981000>)
+
+# Class: <http://snomed.info/id/129265001> (Evaluation - action (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/129265001> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/129265001> "Evaluation - action (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/129265001> "Assessment"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/129265001> "Evaluation"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/129265001> "Patient evaluation - action"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/129265001> "Evaluation - action"@en)
+SubClassOf(<http://snomed.info/id/129265001> <http://snomed.info/id/129264002>)
+
+# Class: <http://snomed.info/id/129266000> (Measurement - action (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/129266000> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/129266000> "Measurement - action (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/129266000> "Measurement - action"@en)
+SubClassOf(<http://snomed.info/id/129266000> <http://snomed.info/id/129265001>)
+
+# Class: <http://snomed.info/id/138875005> (SNOMED CT Concept (SNOMED RT+CTV3))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/138875005> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/138875005> "SNOMED CT Concept (SNOMED RT+CTV3)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/138875005> "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/138875005> "SNOMED Clinical Terms version: 20230901 [R] (September 2023 Release)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/138875005> "© 2002-2023 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/138875005> "SNOMED CT Concept"@en)
+
+# Class: <http://snomed.info/id/14089001> (Red blood cell count (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/14089001> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/14089001> "Red blood cell count (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/14089001> "RBC - Red blood cell count"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/14089001> "RBC count"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/14089001> "Red blood cell count"@en)
+SubClassOf(<http://snomed.info/id/14089001> <http://snomed.info/id/386053000>)
+
+# Class: <http://snomed.info/id/161825005> (Appetite normal (finding))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/161825005> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/161825005> "Appetite normal (finding)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/161825005> "Appetite normal"@en)
+EquivalentClasses(<http://snomed.info/id/161825005> <http://www.semanticweb.org/hepatitis_ontology#Good_Appetite>)
+EquivalentClasses(<http://snomed.info/id/161825005> ObjectIntersectionOf(<http://snomed.info/id/404684003> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://snomed.info/id/363713009> <http://snomed.info/id/17621005>) ObjectSomeValuesFrom(<http://snomed.info/id/363714003> <http://snomed.info/id/33911006>))) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/363714003> <http://snomed.info/id/364645004>))))
+
+# Class: <http://snomed.info/id/170550007> (Chronic disease - general (finding))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/170550007> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/170550007> "Chronic disease - general (finding)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/170550007> "Chronic disease - general"@en)
+SubClassOf(<http://snomed.info/id/170550007> <http://snomed.info/id/243851009>)
+
+# Class: <http://snomed.info/id/17621005> (Normal (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/17621005> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/17621005> "Normal (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/17621005> "Unremarkable"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/17621005> "Normal"@en)
+SubClassOf(<http://snomed.info/id/17621005> <http://snomed.info/id/272099008>)
+
+# Class: <http://snomed.info/id/23573002> (Acetylcholinesterase (substance))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/23573002> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/23573002> "Acetylcholinesterase (substance)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/23573002> "ACE - Acetylcholinesterase"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/23573002> "ACHE - Acetylcholine esterase"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/23573002> "Acetylcholine esterase"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/23573002> "Choline esterase I"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/23573002> "Erythrocyte cholinesterase"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/23573002> "RBC - Red blood cell cholinesterase"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/23573002> "Red blood cell cholinesterase"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/23573002> "True cholinesterase"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/23573002> "Acetylcholinesterase"@en)
+SubClassOf(<http://snomed.info/id/23573002> <http://snomed.info/id/105590001>)
+
+# Class: <http://snomed.info/id/243796009> (Situation with explicit context (situation))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/243796009> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/243796009> "Situation with explicit context (situation)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/243796009> "Context-dependent categories"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/243796009> "Context-dependent category"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/243796009> "Situation with explicit context"@en)
+SubClassOf(<http://snomed.info/id/243796009> <http://snomed.info/id/138875005>)
+
+# Class: <http://snomed.info/id/243851009> (Chronic disease monitoring status (finding))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/243851009> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/243851009> "Chronic disease monitoring status (finding)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/243851009> "Chronic disease monitoring status"@en)
+SubClassOf(<http://snomed.info/id/243851009> <http://snomed.info/id/404684003>)
+
+# Class: <http://snomed.info/id/250231008> (Packed cell volume measurement (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/250231008> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/250231008> "Packed cell volume measurement (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/250231008> "Packed cell volume"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/250231008> "Packed cell volume measurement"@en)
+SubClassOf(<http://snomed.info/id/250231008> ObjectIntersectionOf(<http://snomed.info/id/33468001> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/260686004> <http://snomed.info/id/129265001>))))
+
+# Class: <http://snomed.info/id/250435001> (Presence of cells (finding))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/250435001> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/250435001> "Presence of cells (finding)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/250435001> "Presence of cells"@en)
+SubClassOf(<http://snomed.info/id/250435001> <http://snomed.info/id/127325009>)
+
+# Class: <http://snomed.info/id/250623007> (Blood urea measurement (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/250623007> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/250623007> "Blood urea measurement (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/250623007> "Blood urea"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/250623007> "Blood urea measurement"@en)
+EquivalentClasses(<http://snomed.info/id/250623007> ObjectIntersectionOf(<http://snomed.info/id/71388002> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/116686009> <http://snomed.info/id/119297000>)) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/246093002> <http://snomed.info/id/387092000>)) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/260686004> <http://snomed.info/id/129266000>))))
+
+# Class: <http://snomed.info/id/252294009> (Red blood cell test (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/252294009> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/252294009> "Red blood cell test (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/252294009> "Red blood cell test"@en)
+SubClassOf(<http://snomed.info/id/252294009> <http://snomed.info/id/33468001>)
+
+# Class: <http://snomed.info/id/260379002> (Impaired (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/260379002> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/260379002> "Impaired (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/260379002> "Impaired"@en)
+SubClassOf(<http://snomed.info/id/260379002> <http://snomed.info/id/362981000>)
+
+# Class: <http://snomed.info/id/26758005> (Albumin measurement (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/26758005> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/26758005> "Albumin measurement (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/26758005> "Albumin measurement"@en)
+EquivalentClasses(<http://snomed.info/id/26758005> ObjectIntersectionOf(<http://snomed.info/id/71388002> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/246093002> <http://snomed.info/id/52454007>)) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/260686004> <http://snomed.info/id/129266000>))))
+
+# Class: <http://snomed.info/id/271737000> (Anemia (disorder))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/271737000> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/271737000> "Anemia (disorder)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/271737000> "Absolute anaemia"@en-gb)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/271737000> "Absolute anemia"@en-us)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/271737000> "Anaemia"@en-gb)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/271737000> "Anemia"@en-us)
+SubClassOf(<http://snomed.info/id/271737000> <http://snomed.info/id/414022008>)
+
+# Class: <http://snomed.info/id/272099008> (Descriptor (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/272099008> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/272099008> "Descriptor (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/272099008> "Descriptor"@en)
+SubClassOf(<http://snomed.info/id/272099008> <http://snomed.info/id/362981000>)
+
+# Class: <http://snomed.info/id/274080003> (Bacterial gastroenteritis (disorder))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/274080003> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/274080003> "Bacterial gastroenteritis (disorder)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/274080003> "Bacterial gastroenteritis"@en)
+EquivalentClasses(<http://snomed.info/id/274080003> ObjectIntersectionOf(<http://snomed.info/id/64572001> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://snomed.info/id/116676008> <http://snomed.info/id/409774005>) ObjectSomeValuesFrom(<http://snomed.info/id/246075003> <http://snomed.info/id/409822003>) ObjectSomeValuesFrom(<http://snomed.info/id/363698007> <http://snomed.info/id/122865005>) ObjectSomeValuesFrom(<http://snomed.info/id/370135005> <http://snomed.info/id/441862004>)))))
+
+# Class: <http://snomed.info/id/275765006> (Pus cells in urine (finding))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/275765006> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/275765006> "Pus cells in urine (finding)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/275765006> "Pus cells in urine"@en)
+SubClassOf(<http://snomed.info/id/275765006> ObjectIntersectionOf(<http://snomed.info/id/301830001> <http://snomed.info/id/373668001> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/363714003> <http://snomed.info/id/386053000>))))
+
+# Class: <http://snomed.info/id/281300000> (Below reference range (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/281300000> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/281300000> "Below reference range (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/281300000> "Below reference range"@en)
+SubClassOf(<http://snomed.info/id/281300000> <http://snomed.info/id/1250004>)
+
+# Class: <http://snomed.info/id/289162002> (Finding of quantity of appetite (finding))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/289162002> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/289162002> "Finding of quantity of appetite (finding)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/289162002> "Observation of quantity of appetite"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/289162002> "Finding of quantity of appetite"@en)
+SubClassOf(<http://snomed.info/id/289162002> <http://snomed.info/id/404684003>)
+
+# Class: <http://snomed.info/id/301830001> (Urine finding (finding))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/301830001> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/301830001> "Urine finding (finding)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/301830001> "Urine observation"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/301830001> "Urine finding"@en)
+SubClassOf(<http://snomed.info/id/301830001> <http://snomed.info/id/404684003>)
+
+# Class: <http://snomed.info/id/303118004> (Person in the healthcare environment (person))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/303118004> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/303118004> "Person in the healthcare environment (person)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/303118004> "Person in the healthcare environment"@en)
+SubClassOf(<http://snomed.info/id/303118004> <http://snomed.info/id/48176007>)
+
+# Class: <http://snomed.info/id/304372009> (Binding protein (substance))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/304372009> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/304372009> "Binding protein (substance)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/304372009> "Binding protein"@en)
+SubClassOf(<http://snomed.info/id/304372009> <http://snomed.info/id/105590001>)
+
+# Class: <http://snomed.info/id/30766002> (Quantitative (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/30766002> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/30766002> "Quantitative (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/30766002> "Quantitative"@en)
+SubClassOf(<http://snomed.info/id/30766002> <http://snomed.info/id/362981000>)
+
+# Class: <http://snomed.info/id/310611001> (Cardiovascular measure (observable entity))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/310611001> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/310611001> "Cardiovascular measure (observable entity)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/310611001> "Cardiovascular measurement"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/310611001> "Cardiovascular measurement - observation"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/310611001> "Cardiovascular measure"@en)
+SubClassOf(<http://snomed.info/id/310611001> <http://snomed.info/id/363787002>)
+
+# Class: <http://snomed.info/id/33468001> (Hematology procedure (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/33468001> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/33468001> "Hematology procedure (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/33468001> "Haematology procedure"@en-gb)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/33468001> "Hematology procedure"@en-us)
+SubClassOf(<http://snomed.info/id/33468001> <http://snomed.info/id/386053000>)
+
+# Class: <http://snomed.info/id/33747003> (Glucose measurement, blood (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/33747003> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/33747003> "Glucose measurement, blood (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/33747003> "BS - Blood glucose level"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/33747003> "Blood sugar level"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/33747003> "Glucose measurement, blood"@en)
+EquivalentClasses(<http://snomed.info/id/33747003> ObjectIntersectionOf(<http://snomed.info/id/71388002> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/116686009> <http://snomed.info/id/119297000>)) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/246093002> <http://snomed.info/id/67079006>)) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/260686004> <http://snomed.info/id/129266000>))))
+
+# Class: <http://snomed.info/id/33911006> (Food appetite, function (observable entity))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/33911006> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/33911006> "Food appetite, function (observable entity)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/33911006> "Appetite"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/33911006> "Desire for food"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/33911006> "Food appetite, function"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/33911006> "Food appetite"@en)
+SubClassOf(<http://snomed.info/id/33911006> <http://snomed.info/id/363787002>)
+
+# Class: <http://snomed.info/id/362981000> (Qualifier value (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/362981000> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/362981000> "Qualifier value (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/362981000> "Qualifier value"@en)
+SubClassOf(<http://snomed.info/id/362981000> <http://snomed.info/id/138875005>)
+
+# Class: <http://snomed.info/id/363787002> (Observable entity (observable entity))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/363787002> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/363787002> "Observable entity (observable entity)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/363787002> "Observable entity"@en)
+SubClassOf(<http://snomed.info/id/363787002> <http://snomed.info/id/138875005>)
+
+# Class: <http://snomed.info/id/364645004> (Eating feeding / drinking observable (observable entity))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/364645004> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/364645004> "Eating feeding / drinking observable (observable entity)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/364645004> "Eating feeding / drinking observable"@en)
+SubClassOf(<http://snomed.info/id/364645004> <http://snomed.info/id/363787002>)
+
+# Class: <http://snomed.info/id/364663004> (Appetite observable (observable entity))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/364663004> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/364663004> "Appetite observable (observable entity)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/364663004> "Appetite observable"@en)
+SubClassOf(<http://snomed.info/id/364663004> <http://snomed.info/id/364645004>)
+
+# Class: <http://snomed.info/id/365630000> (Finding of white blood cell number (finding))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/365630000> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/365630000> "Finding of white blood cell number (finding)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/365630000> "Finding of white blood cell number"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/365630000> "White blood cell number"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/365630000> "White blood cell number - finding"@en)
+EquivalentClasses(<http://snomed.info/id/365630000> ObjectIntersectionOf(<http://snomed.info/id/404684003> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/363714003> <http://snomed.info/id/767002>))))
+
+# Class: <http://snomed.info/id/365757006> (Finding of serum creatinine level (finding))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/365757006> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/365757006> "Finding of serum creatinine level (finding)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/365757006> "Finding of serum creatinine level"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/365757006> "Serum creatinine level"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/365757006> "Serum creatinine level - finding"@en)
+EquivalentClasses(<http://snomed.info/id/365757006> ObjectIntersectionOf(<http://snomed.info/id/404684003> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/363714003> <http://snomed.info/id/113075003>))))
+
+# Class: <http://snomed.info/id/365812005> (Finding of blood glucose level (finding))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/365812005> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/365812005> "Finding of blood glucose level (finding)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/365812005> "Blood glucose level"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/365812005> "Blood glucose result"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/365812005> "Blood glucose result - finding"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/365812005> "Finding of blood glucose level"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/365812005> "Blood glucose level - finding"@en)
+EquivalentClasses(<http://snomed.info/id/365812005> ObjectIntersectionOf(<http://snomed.info/id/404684003> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/363714003> <http://snomed.info/id/33747003>))))
+
+# Class: <http://snomed.info/id/36969009> (Placement of stent in coronary artery (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/36969009> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/36969009> "Placement of stent in coronary artery (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/36969009> "Insertion of coronary artery stent"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/36969009> "Placement of stent in coronary artery"@en)
+SubClassOf(<http://snomed.info/id/36969009> <http://snomed.info/id/128927009>)
+
+# Class: <http://snomed.info/id/373668001> (Pus cells (finding))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/373668001> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/373668001> "Pus cells (finding)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/373668001> "Pus cells"@en)
+SubClassOf(<http://snomed.info/id/373668001> ObjectIntersectionOf(<http://snomed.info/id/250435001> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/363714003> <http://snomed.info/id/386053000>))))
+
+# Class: <http://snomed.info/id/38082009> (Hemoglobin (substance))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/38082009> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/38082009> "Hemoglobin (substance)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/38082009> "HGB - Haemoglobin"@en-gb)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/38082009> "HGB - Hemoglobin"@en-us)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/38082009> "Hb"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/38082009> "Hb - Haemoglobin"@en-gb)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/38082009> "Hb - Hemoglobin"@en-us)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/38082009> "Haemoglobin"@en-gb)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/38082009> "Hemoglobin"@en-us)
+SubClassOf(<http://snomed.info/id/38082009> <http://snomed.info/id/304372009>)
+
+# Class: <http://snomed.info/id/385658003> (Done (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/385658003> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/385658003> "Done (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/385658003> "Done"@en)
+SubClassOf(<http://snomed.info/id/385658003> <http://snomed.info/id/362981000>)
+
+# Class: <http://snomed.info/id/386053000> (Evaluation procedure (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/386053000> "Supporting concept (with definition)")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/386053000> "Evaluation procedure (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/386053000> "Assessment"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/386053000> "Investigations"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://snomed.info/id/386053000> "Determination of a value, conclusion, or inference by evaluating evidence"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/386053000> "Evaluation procedure"@en)
+EquivalentClasses(<http://snomed.info/id/386053000> ObjectIntersectionOf(<http://snomed.info/id/71388002> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/260686004> <http://snomed.info/id/129265001>))))
+
+# Class: <http://snomed.info/id/387092000> (Urea (substance))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/387092000> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/387092000> "Urea (substance)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/387092000> "Carbamide"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/387092000> "Carbonyldiamide"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/387092000> "Urea"@en)
+SubClassOf(<http://snomed.info/id/387092000> <http://snomed.info/id/105590001>)
+
+# Class: <http://snomed.info/id/397669002> (Age (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/397669002> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/397669002> "Age (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/397669002> "Age - descriptor"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/397669002> "Age"@en)
+SubClassOf(<http://snomed.info/id/397669002> <http://snomed.info/id/272099008>)
+
+# Class: <http://snomed.info/id/39972003> (Sodium (substance))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/39972003> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/39972003> "Sodium (substance)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/39972003> "Na - Sodium"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/39972003> "Sodium"@en)
+SubClassOf(<http://snomed.info/id/39972003> <http://snomed.info/id/105590001>)
+
+# Class: <http://snomed.info/id/404684003> (Clinical finding (finding))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/404684003> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/404684003> "Clinical finding (finding)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/404684003> "Clinical finding"@en)
+SubClassOf(<http://snomed.info/id/404684003> <http://snomed.info/id/138875005>)
+
+# Class: <http://snomed.info/id/405039009> (Appetite status (observable entity))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/405039009> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/405039009> "Appetite status (observable entity)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/405039009> "Appetite status"@en)
+SubClassOf(<http://snomed.info/id/405039009> <http://snomed.info/id/364663004>)
+
+# Class: <http://snomed.info/id/409774005> (Inflammatory morphology (morphologic abnormality))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/409774005> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/409774005> "Inflammatory morphology (morphologic abnormality)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/409774005> "Inflammatory morphology"@en)
+SubClassOf(<http://snomed.info/id/409774005> <http://snomed.info/id/123037004>)
+
+# Class: <http://snomed.info/id/409822003> (Domain Bacteria (organism))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/409822003> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/409822003> "Domain Bacteria (organism)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/409822003> "Bacteria"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/409822003> "Superkingdom Bacteria"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/409822003> "Domain Bacteria"@en)
+SubClassOf(<http://snomed.info/id/409822003> <http://snomed.info/id/410607006>)
+
+# Class: <http://snomed.info/id/410513005> (In the past (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/410513005> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/410513005> "In the past (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/410513005> "In the past"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/410513005> "Past"@en)
+SubClassOf(<http://snomed.info/id/410513005> <http://snomed.info/id/362981000>)
+
+# Class: <http://snomed.info/id/410604004> (Subject of record (person))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/410604004> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/410604004> "Subject of record (person)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/410604004> "Subject of record"@en)
+SubClassOf(<http://snomed.info/id/410604004> <http://snomed.info/id/48176007>)
+
+# Class: <http://snomed.info/id/410607006> (Organism (organism))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/410607006> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/410607006> "Organism (organism)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/410607006> "Organism"@en)
+SubClassOf(<http://snomed.info/id/410607006> <http://snomed.info/id/138875005>)
+
+# Class: <http://snomed.info/id/414022008> (Disorder of cellular component of blood (disorder))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/414022008> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/414022008> "Disorder of cellular component of blood (disorder)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/414022008> "Blood disease"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/414022008> "Disorder of cellular component of blood"@en)
+SubClassOf(<http://snomed.info/id/414022008> <http://snomed.info/id/64572001>)
+
+# Class: <http://snomed.info/id/41898006> (Erythrocyte (cell))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/41898006> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/41898006> "Erythrocyte (cell)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/41898006> "RBC"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/41898006> "RBC - Red blood cell"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/41898006> "Red blood cell"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/41898006> "Red blood corpuscule"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/41898006> "Erythrocyte"@en)
+SubClassOf(<http://snomed.info/id/41898006> <http://snomed.info/id/123037004>)
+
+# Class: <http://snomed.info/id/428375006> (History of placement of stent for coronary artery disease (situation))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/428375006> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/428375006> "History of placement of stent for coronary artery disease (situation)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/428375006> "History of coronary artery disease with stent placement"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/428375006> "History of placement of stent for coronary artery disease"@en)
+EquivalentClasses(<http://snomed.info/id/428375006> ObjectIntersectionOf(<http://snomed.info/id/243796009> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://snomed.info/id/363589002> <http://snomed.info/id/36969009>) ObjectSomeValuesFrom(<http://snomed.info/id/408730004> <http://snomed.info/id/385658003>) ObjectSomeValuesFrom(<http://snomed.info/id/408731000> <http://snomed.info/id/410513005>) ObjectSomeValuesFrom(<http://snomed.info/id/408732007> <http://snomed.info/id/410604004>)))))
+
+# Class: <http://snomed.info/id/441689006> (Measurement of total hemoglobin concentration (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/441689006> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/441689006> "Measurement of total hemoglobin concentration (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/441689006> "Measurement of total haemoglobin concentration"@en-gb)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/441689006> "Measurement of total hemoglobin concentration"@en-us)
+SubClassOf(<http://snomed.info/id/441689006> <http://snomed.info/id/252294009>)
+
+# Class: <http://snomed.info/id/441862004> (Infectious process (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/441862004> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/441862004> "Infectious process (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/441862004> "Infectious process"@en)
+SubClassOf(<http://snomed.info/id/441862004> <http://snomed.info/id/362981000>)
+
+# Class: <http://snomed.info/id/46190003> (Acetylcholinesterase, red blood cell measurement (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/46190003> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/46190003> "Acetylcholinesterase, red blood cell measurement (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/46190003> "Acetylcholinesterase, RBC measurement"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/46190003> "Cholinesterase, erythrocytic measurement"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/46190003> "Red cell cholinesterase measurement"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/46190003> "Acetylcholinesterase, red blood cell measurement"@en)
+EquivalentClasses(<http://snomed.info/id/46190003> ObjectIntersectionOf(<http://snomed.info/id/71388002> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/116686009> <http://snomed.info/id/119351004>)) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/246093002> <http://snomed.info/id/23573002>)) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/260686004> <http://snomed.info/id/129266000>))))
+
+# Class: <http://snomed.info/id/48176007> (Social context (social concept))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/48176007> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/48176007> "Social context (social concept)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/48176007> "Social context"@en)
+SubClassOf(<http://snomed.info/id/48176007> <http://snomed.info/id/138875005>)
+
+# Class: <http://snomed.info/id/52454007> (Albumin (substance))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/52454007> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/52454007> "Albumin (substance)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/52454007> "Albumin"@en)
+SubClassOf(<http://snomed.info/id/52454007> <http://snomed.info/id/105590001>)
+
+# Class: <http://snomed.info/id/55304007> (Red blood cell histogram evaluation (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/55304007> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/55304007> "Red blood cell histogram evaluation (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/55304007> "Red blood cell histogram evaluation"@en)
+SubClassOf(<http://snomed.info/id/55304007> ObjectIntersectionOf(<http://snomed.info/id/252294009> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/246093002> <http://snomed.info/id/41898006>)) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/260686004> <http://snomed.info/id/129265001>))))
+
+# Class: <http://snomed.info/id/56459004> (Foot structure (body structure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/56459004> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/56459004> "Foot structure (body structure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/56459004> "Foot"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/56459004> "Foot structure"@en)
+SubClassOf(<http://snomed.info/id/56459004> <http://snomed.info/id/123037004>)
+
+# Class: <http://snomed.info/id/59573005> (Potassium measurement (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/59573005> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/59573005> "Potassium measurement (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/59573005> "Potassium measurement"@en)
+EquivalentClasses(<http://snomed.info/id/59573005> ObjectIntersectionOf(<http://snomed.info/id/71388002> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/246093002> <http://snomed.info/id/88480006>)) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/260686004> <http://snomed.info/id/129266000>))))
+
+# Class: <http://snomed.info/id/64033007> (Kidney structure (body structure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/64033007> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/64033007> "Kidney structure (body structure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/64033007> "Kidney"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/64033007> "Renal structure"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/64033007> "Kidney structure"@en)
+SubClassOf(<http://snomed.info/id/64033007> <http://snomed.info/id/123037004>)
+
+# Class: <http://snomed.info/id/64379006> (Decrease in appetite (finding))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/64379006> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/64379006> "Decrease in appetite (finding)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/64379006> "Poor appetite"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/64379006> "Reduced appetite"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/64379006> "Decrease in appetite"@en)
+EquivalentClasses(<http://snomed.info/id/64379006> <http://www.semanticweb.org/hepatitis_ontology#Poor_Appetite>)
+EquivalentClasses(<http://snomed.info/id/64379006> ObjectIntersectionOf(<http://snomed.info/id/289162002> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://snomed.info/id/363713009> <http://snomed.info/id/1250004>) ObjectSomeValuesFrom(<http://snomed.info/id/363714003> <http://snomed.info/id/33911006>))) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/363714003> <http://snomed.info/id/364645004>))))
+
+# Class: <http://snomed.info/id/64572001> (Disease (disorder))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/64572001> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/64572001> "Disease (disorder)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/64572001> "Clinical disease AND/OR syndrome"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/64572001> "Diseases"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/64572001> "Disorder"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/64572001> "Disorders"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/64572001> "Syndrome"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/64572001> "Disease"@en)
+SubClassOf(<http://snomed.info/id/64572001> <http://snomed.info/id/404684003>)
+
+# Class: <http://snomed.info/id/67079006> (Glucose (substance))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/67079006> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/67079006> "Glucose (substance)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/67079006> "D-glucose"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/67079006> "Dextrose"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/67079006> "Glucose"@en)
+SubClassOf(<http://snomed.info/id/67079006> <http://snomed.info/id/105590001>)
+
+# Class: <http://snomed.info/id/69285004> (Specific gravity measurement (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/69285004> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/69285004> "Specific gravity measurement (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/69285004> "SG - Specific gravity"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/69285004> "Specific gravity measurement"@en)
+SubClassOf(<http://snomed.info/id/69285004> ObjectIntersectionOf(<http://snomed.info/id/71388002> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/260686004> <http://snomed.info/id/129266000>))))
+
+# Class: <http://snomed.info/id/704180000> (Hypertension, abnormal renal/liver function, stroke, bleeding history or predisposition, labile international normalized ratio, elderly over 65, and drugs/alcohol concomitantly bleeding risk score (observable entity))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/704180000> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/704180000> "Hypertension, abnormal renal/liver function, stroke, bleeding history or predisposition, labile international normalized ratio, elderly over 65, and drugs/alcohol concomitantly bleeding risk score (observable entity)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/704180000> "HAS-BLED bleeding risk score"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/704180000> "Hypertension, abnormal renal/liver function, stroke, bleeding history or predisposition, labile international normalised ratio, elderly over 65, and drugs/alcohol concomitantly bleeding risk score"@en-gb)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/704180000> "Hypertension, abnormal renal/liver function, stroke, bleeding history or predisposition, labile international normalized ratio, elderly over 65, and drugs/alcohol concomitantly bleeding risk score"@en-us)
+SubClassOf(<http://snomed.info/id/704180000> <http://snomed.info/id/80943009>)
+
+# Class: <http://snomed.info/id/709044004> (Chronic kidney disease (disorder))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/709044004> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/709044004> "Chronic kidney disease (disorder)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/709044004> "CKD - chronic kidney disease"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/709044004> "Chronic renal disease"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/709044004> "Chronic renal impairment"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/709044004> "Chronic kidney disease"@en)
+EquivalentClasses(<http://snomed.info/id/709044004> ObjectIntersectionOf(<http://snomed.info/id/64572001> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://snomed.info/id/363713009> <http://snomed.info/id/260379002>) ObjectSomeValuesFrom(<http://snomed.info/id/363714003> <http://snomed.info/id/11953005>))) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/263502005> <http://snomed.info/id/90734009>)) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/363698007> <http://snomed.info/id/64033007>))))
+
+# Class: <http://snomed.info/id/71388002> (Procedure (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/71388002> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/71388002> "Procedure (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/71388002> "Procedure"@en)
+SubClassOf(<http://snomed.info/id/71388002> <http://snomed.info/id/138875005>)
+
+# Class: <http://snomed.info/id/719033000> (Evaluation of kidney biopsy specimen (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/719033000> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/719033000> "Evaluation of kidney biopsy specimen (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/719033000> "Evaluation of kidney biopsy specimen"@en)
+SubClassOf(<http://snomed.info/id/719033000> <http://snomed.info/id/386053000>)
+
+# Class: <http://snomed.info/id/719984002> (Cardiac process (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/719984002> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/719984002> "Cardiac process (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/719984002> "Heart beating"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/719984002> "Heart beating process"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/719984002> "Cardiac process"@en)
+SubClassOf(<http://snomed.info/id/719984002> <http://snomed.info/id/362981000>)
+
+# Class: <http://snomed.info/id/722243006> (Pressure (property) (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/722243006> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/722243006> "Pressure (property) (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/722243006> "Pressure (property)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/722243006> "Pressure"@en)
+SubClassOf(<http://snomed.info/id/722243006> <http://snomed.info/id/362981000>)
+
+# Class: <http://snomed.info/id/723066005> (Kidney biopsy result normal (finding))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/723066005> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/723066005> "Kidney biopsy result normal (finding)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/723066005> "Renal biopsy result normal"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/723066005> "Kidney biopsy result normal"@en)
+EquivalentClasses(<http://snomed.info/id/723066005> ObjectIntersectionOf(<http://snomed.info/id/404684003> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://snomed.info/id/363713009> <http://snomed.info/id/17621005>) ObjectSomeValuesFrom(<http://snomed.info/id/363714003> <http://snomed.info/id/719033000>)))))
+
+# Class: <http://snomed.info/id/73211009> (Diabetes mellitus (disorder))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/73211009> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/73211009> "Diabetes mellitus (disorder)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/73211009> "DM - Diabetes mellitus"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/73211009> "Diabetes mellitus"@en)
+SubClassOf(<http://snomed.info/id/73211009> ObjectIntersectionOf(<http://snomed.info/id/126877002> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/363698007> <http://snomed.info/id/113331007>))))
+
+# Class: <http://snomed.info/id/75367002> (Blood pressure (observable entity))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/75367002> "Focus concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/75367002> "Blood pressure (observable entity)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/75367002> "BP - Blood pressure"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/75367002> "Blood pressure"@en)
+EquivalentClasses(<http://snomed.info/id/75367002> ObjectIntersectionOf(<http://snomed.info/id/310611001> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/370130000> <http://snomed.info/id/722243006>)) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/370132008> <http://snomed.info/id/30766002>)) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/704319004> <http://snomed.info/id/113257007>)) ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/704321009> <http://snomed.info/id/719984002>))))
+
+# Class: <http://snomed.info/id/767002> (White blood cell count (procedure))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/767002> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/767002> "White blood cell count (procedure)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/767002> "WBC - White blood cell count"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/767002> "WBC count"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/767002> "WCC - White blood cell count"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/767002> "White blood cell count - observation"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/767002> "White blood cell count"@en)
+SubClassOf(<http://snomed.info/id/767002> <http://snomed.info/id/386053000>)
+
+# Class: <http://snomed.info/id/79654002> (Edema (morphologic abnormality))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/79654002> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/79654002> "Edema (morphologic abnormality)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/79654002> "Edema - lesion"@en-us)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/79654002> "Edematous"@en-us)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/79654002> "Oedema - lesion"@en-gb)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/79654002> "Oedematous"@en-gb)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/79654002> "Edema"@en-us)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/79654002> "Oedema"@en-gb)
+SubClassOf(<http://snomed.info/id/79654002> <http://snomed.info/id/123037004>)
+
+# Class: <http://snomed.info/id/80943009> (Risk factor (observable entity))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/80943009> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/80943009> "Risk factor (observable entity)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/80943009> "Risk factor"@en)
+SubClassOf(<http://snomed.info/id/80943009> <http://snomed.info/id/363787002>)
+
+# Class: <http://snomed.info/id/88480006> (Potassium (substance))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/88480006> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/88480006> "Potassium (substance)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/88480006> "K - Potassium"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/88480006> "Potassium"@en)
+SubClassOf(<http://snomed.info/id/88480006> <http://snomed.info/id/105590001>)
+
+# Class: <http://snomed.info/id/89615005> (Abnormal cellular component of blood (morphologic abnormality))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/89615005> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/89615005> "Abnormal cellular component of blood (morphologic abnormality)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/89615005> "Abnormal blood cell"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/89615005> "Abnormal cellular component of blood"@en)
+SubClassOf(<http://snomed.info/id/89615005> <http://snomed.info/id/123037004>)
+
+# Class: <http://snomed.info/id/90734009> (Chronic (qualifier value))
+
+AnnotationAssertion(rdfs:comment <http://snomed.info/id/90734009> "Supporting concept")
+AnnotationAssertion(rdfs:label <http://snomed.info/id/90734009> "Chronic (qualifier value)"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <http://snomed.info/id/90734009> "Chronic course - prolonged duration"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <http://snomed.info/id/90734009> "Chronic"@en)
+SubClassOf(<http://snomed.info/id/90734009> <http://snomed.info/id/272099008>)
+
+# Class: <http://www.semanticweb.org/hepatitis_ontology#Abnormal> (<http://www.semanticweb.org/hepatitis_ontology#Abnormal>)
+
+SubClassOf(<http://www.semanticweb.org/hepatitis_ontology#Abnormal> <http://snomed.info/id/55304007>)
+
+# Class: <http://www.semanticweb.org/hepatitis_ontology#BA_Notpresent> (<http://www.semanticweb.org/hepatitis_ontology#BA_Notpresent>)
+
+SubClassOf(<http://www.semanticweb.org/hepatitis_ontology#BA_Notpresent> <http://snomed.info/id/274080003>)
+
+# Class: <http://www.semanticweb.org/hepatitis_ontology#BA_Present> (<http://www.semanticweb.org/hepatitis_ontology#BA_Present>)
+
+SubClassOf(<http://www.semanticweb.org/hepatitis_ontology#BA_Present> <http://snomed.info/id/274080003>)
+
+# Class: <http://www.semanticweb.org/hepatitis_ontology#Good_Appetite> (Good Appetite)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/hepatitis_ontology#Good_Appetite> "Good Appetite")
+SubClassOf(<http://www.semanticweb.org/hepatitis_ontology#Good_Appetite> <http://snomed.info/id/405039009>)
+
+# Class: <http://www.semanticweb.org/hepatitis_ontology#Normal> (<http://www.semanticweb.org/hepatitis_ontology#Normal>)
+
+SubClassOf(<http://www.semanticweb.org/hepatitis_ontology#Normal> <http://snomed.info/id/55304007>)
+
+# Class: <http://www.semanticweb.org/hepatitis_ontology#PCC_Notpresent> (<http://www.semanticweb.org/hepatitis_ontology#PCC_Notpresent>)
+
+SubClassOf(<http://www.semanticweb.org/hepatitis_ontology#PCC_Notpresent> <http://snomed.info/id/275765006>)
+
+# Class: <http://www.semanticweb.org/hepatitis_ontology#PCC_Present> (<http://www.semanticweb.org/hepatitis_ontology#PCC_Present>)
+
+SubClassOf(<http://www.semanticweb.org/hepatitis_ontology#PCC_Present> <http://snomed.info/id/275765006>)
+
+# Class: <http://www.semanticweb.org/hepatitis_ontology#PC_Abnormal> (<http://www.semanticweb.org/hepatitis_ontology#PC_Abnormal>)
+
+SubClassOf(<http://www.semanticweb.org/hepatitis_ontology#PC_Abnormal> <http://snomed.info/id/373668001>)
+
+# Class: <http://www.semanticweb.org/hepatitis_ontology#PC_Normal> (<http://www.semanticweb.org/hepatitis_ontology#PC_Normal>)
+
+SubClassOf(<http://www.semanticweb.org/hepatitis_ontology#PC_Normal> <http://snomed.info/id/373668001>)
+
+# Class: <http://www.semanticweb.org/hepatitis_ontology#Poor_Appetite> (Poor Appetite)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/hepatitis_ontology#Poor_Appetite> "Poor Appetite")
+SubClassOf(<http://www.semanticweb.org/hepatitis_ontology#Poor_Appetite> <http://snomed.info/id/405039009>)
+
+
+SubClassOf(ObjectIntersectionOf(<http://snomed.info/id/404684003> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectSomeValuesFrom(<http://snomed.info/id/363714003> <http://snomed.info/id/386053000>))) <http://snomed.info/id/127325009>)
+SubClassOf(ObjectIntersectionOf(<http://snomed.info/id/64572001> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://snomed.info/id/363713009> <http://snomed.info/id/281300000>) ObjectSomeValuesFrom(<http://snomed.info/id/363714003> <http://snomed.info/id/14089001>)))) <http://snomed.info/id/271737000>)
+SubClassOf(ObjectIntersectionOf(<http://snomed.info/id/64572001> ObjectSomeValuesFrom(<http://snomed.info/id/609096000> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://snomed.info/id/363713009> <http://snomed.info/id/281300000>) ObjectSomeValuesFrom(<http://snomed.info/id/363714003> <http://snomed.info/id/441689006>)))) <http://snomed.info/id/271737000>)
+SubObjectPropertyOf(ObjectPropertyChain(<http://snomed.info/id/246075003> <http://snomed.info/id/738774007>) <http://snomed.info/id/246075003>)
+SubObjectPropertyOf(ObjectPropertyChain(<http://snomed.info/id/246093002> <http://snomed.info/id/738774007>) <http://snomed.info/id/246093002>)
+)
