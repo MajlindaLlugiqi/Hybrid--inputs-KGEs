@@ -32,14 +32,18 @@ random.seed(seed_value)
 np.random.seed(seed_value)
 tf.random.set_seed(seed_value)
 
-ontologies = ["heart_small", "heart_extended", "heart_snomed"]
+# ontologies = ["heart_small", "heart_extended", "heart_snomed"]
+domain="kidney"
+ontologies = ["kidney_snomed"]
 
 # Set paths and parameters
 current_path = os.getcwd()
 base_data_dir = os.path.join(current_path, "data")
 kg_base_dir = os.path.join(current_path, "knowledge_graphs")
 
-dataset_path = os.path.join(base_data_dir, 'heart_dataset.csv')
+# dataset_path = os.path.join(base_data_dir, 'heart_dataset.csv')
+
+dataset_path = os.path.join(base_data_dir, 'kidney_disease.csv')
 
 uri_mapping = {
     "heart_small": "http://www.semanticweb.org/heart_ontology",
@@ -47,8 +51,8 @@ uri_mapping = {
     "heart_snomed": "owlapi:ontology",
     "kidney_snomed": "http://snomed.info/id/"
 }
-vector_sizes = [64, 100]
-# vector_sizes = [64, 128, 100]
+# vector_sizes = [64, 100]
+vector_sizes = [64, 128, 100]
 
 def load_and_preprocess_dataset(df):
     categorical_columns = []
@@ -72,7 +76,8 @@ def load_and_preprocess_dataset(df):
     X_dataset_scaled = scaler.fit_transform(X_dataset)
     return X_dataset_scaled, y
 
-df = pd.read_csv(dataset_path, delimiter=';')
+# df = pd.read_csv(dataset_path, delimiter=';')
+df = pd.read_csv(dataset_path, delimiter=',')
 X_dataset, y = load_and_preprocess_dataset(df)
 
 def load_ontology(ontology_path):
@@ -239,7 +244,8 @@ def train_and_evaluate(models_with_params, Xs, y, ontology, triples, base_uri, c
                 train_triples_factory = TriplesFactory.from_labeled_triples(train_triples)
 
                 patient_prefix = f"{base_uri}#Patient_"
-                predicate_to_match = f"{base_uri}#hasHeartDisease"
+                # predicate_to_match = f"{base_uri}#hasHeartDisease"
+                predicate_to_match = f"{base_uri}#hasKidneyDisease"
 
                 test_triples_factory = TriplesFactory.from_labeled_triples(test_triples)
                 filtered_test_triples = filter_triples_test(test_triples, patient_prefix, predicate_to_match)
@@ -365,19 +371,19 @@ def train_and_evaluate(models_with_params, Xs, y, ontology, triples, base_uri, c
 all_results_list = []
 
 for ontology in ontologies:
-    ontology_path = os.path.join(kg_base_dir, f'heart/{ontology}.owl')
+    ontology_path = os.path.join(kg_base_dir, f'{domain}/{ontology}.owl')
     base_uri = uri_mapping[ontology]
     triples = load_ontology(ontology_path)
 
     for vector_size in vector_sizes:
         triples_factory = TriplesFactory.from_labeled_triples(triples)
-        checkpoint_dir = os.path.join('results_fine_tuned', 'heart', str(vector_size), 'checkpoints')
+        checkpoint_dir = os.path.join('results_fine_tuned', domain, str(vector_size), 'checkpoints')
         os.makedirs(checkpoint_dir, exist_ok=True)
         results_list = train_and_evaluate(models_with_params, {'Original Dataset': X_dataset}, y, ontology, triples,
                                           base_uri, checkpoint_dir, vector_size)
         all_results_list.extend(results_list)
         results_df = pd.DataFrame(results_list)
-        results_dir = os.path.join('results_fine_tuned', 'heart', str(vector_size))
+        results_dir = os.path.join('results_fine_tuned', domain, str(vector_size))
         os.makedirs(results_dir, exist_ok=True)
         results_file_path = os.path.join(results_dir, f'{ontology}/evaluation_results.csv')
         if not os.path.exists(results_file_path):
@@ -388,7 +394,7 @@ for ontology in ontologies:
     # triples_factory = TriplesFactory.from_labeled_triples(triples)
     # checkpoint_dir = os.path.join('results_fine_tuned', 'heart', '128', 'checkpoints')
     # os.makedirs(checkpoint_dir, exist_ok=True)
-    # results_list = train_and_evaluate(models_with_params, {'Original Dataset': X_dataset}, y, ontology, triples,
+    # results_list = train_and_evaluate(models_with_params, {'Original Dataset': X_dataset}, y, ontology, triples,  
     #                                   base_uri, checkpoint_dir, vector_size)
     # all_results_list.extend(results_list)
     # results_df = pd.DataFrame(results_list)
