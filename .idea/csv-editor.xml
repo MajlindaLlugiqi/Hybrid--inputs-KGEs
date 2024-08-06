@@ -24,6 +24,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/results_fine_tuned/heart/100/heart_extended/evaluation_results.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/results_fine_tuned/heart/100/heart_small/evaluation_results.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/results_fine_tuned/heart/128/all_ontologies_evaluation_results.csv">
           <value>
             <Attribute>
@@ -45,14 +59,14 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="/results_fine_tuned/heart/128/evaluation_results.csv">
+        <entry key="/results_fine_tuned/heart/128/heart_extended/evaluation_results.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/results_fine_tuned/heart/128/heart_extended/evaluation_results.csv">
+        <entry key="/results_fine_tuned/heart/128/heart_small/evaluation_results.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -67,6 +81,48 @@
           </value>
         </entry>
         <entry key="/results_fine_tuned/heart/64/checkpoints/heart_small_intermediate_results.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/results_fine_tuned/heart/64/heart_extended/evaluation_results.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/results_fine_tuned/heart/64/heart_small/evaluation_results.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/results_fine_tuned/kidney/100/checkpoints/kidney_snomed_intermediate_results.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/results_fine_tuned/kidney/128/checkpoints/kidney_snomed_intermediate_results.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/results_fine_tuned/kidney/128/kidney_snomed/evaluation_results.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/results_fine_tuned/kidney/64/kidney_snomed/evaluation_results.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

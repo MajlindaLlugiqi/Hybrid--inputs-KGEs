@@ -15,8 +15,8 @@ onto_names = ["heart_small","heart_extended","heart_snomed"]
 
 domain = "heart"
 # onto_type = "heart_small"
-vector_sizes = [128]
-size= 128
+vector_sizes = [100]
+size= 100
     # , 128, 100]
 score_cols = ['Accuracy', 'F1_Score', 'Precision', 'Recall', 'F2_Score']
 aggregated_data = {onto_name: pd.DataFrame() for onto_name in onto_names}

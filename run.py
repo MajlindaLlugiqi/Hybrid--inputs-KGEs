@@ -204,13 +204,17 @@ def add_distance_features(dataframe, embeddings, entity_to_id, feature_prefix, y
     return valid_dataframe
 
 def map_indices_to_uris(indices, base_uri):
-    return [f"{base_uri}#Patient_{i}" for i in indices]
-
+    if domain == "heart":
+        return [f"{base_uri}#Patient_{i}" for i in indices]
+    else:
+        return [f"{base_uri}Patient_{i}" for i in indices]
+#
 models_with_params = initialize_models_with_params()
 
 def create_combined_triples_factory(triples, train_uris, test_uris):
     combined_uris = np.unique(np.concatenate((train_uris, test_uris)))
     combined_triples = triples[np.isin(triples[:, 0], combined_uris)]
+    print(f"combined_uris: {combined_uris}")
     combined_triples_factory = TriplesFactory.from_labeled_triples(combined_triples)
     return combined_triples_factory
 
