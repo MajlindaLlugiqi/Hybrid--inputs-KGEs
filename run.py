@@ -18,13 +18,18 @@ from pykeen.pipeline import pipeline
 from pykeen.models import TransH, DistMult
 from pykeen.triples import TriplesFactory
 import rdflib
-# import networkx as nx
-# from node2vec import Node2Vec as N2V
-# from pyrdf2vec.graphs import KG
-# from pyrdf2vec.walkers import RandomWalker
-# from pyrdf2vec.embedders import RDF2Vec
-# from gensim.models import Word2Vec
-# import torch
+
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+from sklearn.manifold import TSNE
+import seaborn as sns
+from sklearn.cluster import KMeans
+
+import networkx as nx
+from node2vec import Node2Vec as N2V
+from gensim.models import Word2Vec
 
 # Set random seeds for reproducibility
 seed_value = 42
@@ -32,18 +37,19 @@ random.seed(seed_value)
 np.random.seed(seed_value)
 tf.random.set_seed(seed_value)
 
-# ontologies = ["heart_small", "heart_extended", "heart_snomed"]
-domain="kidney"
-ontologies = ["kidney_snomed"]
+ontologies = ["heart_snomed"]
+# "heart_small", "heart_extended",
+domain="heart"
+# ontologies = ["kidney_snomed"]
 
 # Set paths and parameters
 current_path = os.getcwd()
 base_data_dir = os.path.join(current_path, "data")
 kg_base_dir = os.path.join(current_path, "knowledge_graphs")
 
-# dataset_path = os.path.join(base_data_dir, 'heart_dataset.csv')
-
-dataset_path = os.path.join(base_data_dir, 'kidney_disease.csv')
+dataset_path = os.path.join(base_data_dir, 'heart_dataset.csv')
+#
+# dataset_path = os.path.join(base_data_dir, 'kidney_disease.csv')
 
 uri_mapping = {
     "heart_small": "http://www.semanticweb.org/heart_ontology",
@@ -51,8 +57,9 @@ uri_mapping = {
     "heart_snomed": "owlapi:ontology",
     "kidney_snomed": "http://snomed.info/id/"
 }
-# vector_sizes = [64, 100]
-vector_sizes = [64, 128, 100]
+vector_sizes = [128, 100]
+# vector_sizes = [64]
+    # , 128, 100]
 
 def load_and_preprocess_dataset(df):
     categorical_columns = []
@@ -76,8 +83,8 @@ def load_and_preprocess_dataset(df):
     X_dataset_scaled = scaler.fit_transform(X_dataset)
     return X_dataset_scaled, y
 
-# df = pd.read_csv(dataset_path, delimiter=';')
-df = pd.read_csv(dataset_path, delimiter=',')
+df = pd.read_csv(dataset_path, delimiter=';')
+# df = pd.read_csv(dataset_path, delimiter=',')
 X_dataset, y = load_and_preprocess_dataset(df)
 
 def load_ontology(ontology_path):
@@ -91,10 +98,57 @@ def load_ontology(ontology_path):
     for subj, pred, obj in g:
         triples.append((str(subj), str(pred), str(obj)))
 
-    print(f"Total triples loaded: {len(triples)}")
+    # print(f"Total triples loaded: {len(triples)}")
 
     triples = np.array(triples)
     return triples
+
+
+class GraphAutoencoder(nn.Module):
+    def __init__(self, input_dim, hidden_dim, output_dim):
+        super(GraphAutoencoder, self).__init__()
+        self.encoder = nn.Sequential(
+            nn.Linear(input_dim, hidden_dim),
+            nn.ReLU(),
+            nn.Linear(hidden_dim, output_dim)
+        )
+        self.decoder = nn.Sequential(
+            nn.Linear(output_dim, hidden_dim),
+            nn.ReLU(),
+            nn.Linear(hidden_dim, input_dim)
+        )
+
+    def forward(self, x):
+        encoded = self.encoder(x)
+        decoded = self.decoder(encoded)
+        return encoded, decoded
+
+
+def autoencoder_embeddings(triples, input_dim, hidden_dim, output_dim, uris):
+    model = GraphAutoencoder(input_dim, hidden_dim, output_dim)
+    criterion = nn.MSELoss()
+    optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+    # Dummy data to simulate input - replace with actual data preprocessing
+    data = torch.randn(len(uris), input_dim)
+
+    # Training loop
+    for epoch in range(1000):
+        optimizer.zero_grad()
+        encoded, decoded = model(data)
+        loss = criterion(decoded, data)
+        loss.backward()
+        optimizer.step()
+
+    # Get the embeddings
+    with torch.no_grad():
+        embeddings = model.encoder(data).numpy()
+
+    # Create a mapping from URIs to indices
+    entity_to_id = {uri: i for i, uri in enumerate(uris)}
+
+    return embeddings, entity_to_id
+
 
 def pykeen_embeddings(model, dimension, triples_factory_train, triples_factory_test):
     train_result = pipeline(
@@ -103,7 +157,7 @@ def pykeen_embeddings(model, dimension, triples_factory_train, triples_factory_t
         testing=triples_factory_test,
         training_loop='slcwa',
         model_kwargs=dict(embedding_dim=dimension),
-        training_kwargs=dict(num_epochs=50, batch_size=128),
+        training_kwargs=dict(num_epochs=50, batch_size=32),
     )
 
     entity_embeddings = train_result.model.entity_representations[0](indices=None).detach().numpy()
@@ -120,44 +174,89 @@ def pykeen_embeddings(model, dimension, triples_factory_train, triples_factory_t
 #     entity_to_id = {entity: idx for idx, entity in enumerate(kg._entities)}
 #     return embeddings, entity_to_id
 
-# def rdf2vec_embeddings(triples, params, dimension):
-#     kg = KG(location="temp_kg.nt", file_type="ntriples")
-#     kg.add_triples(triples.tolist())
-#     walker = RandomWalker(params['depth'], params['walks_per_node'])
-#     embedder = RDF2Vec(Word2Vec(vector_size=dimension, window=params['window'], sg=1, hs=0, negative=5, min_count=1, workers=4))
-#     embeddings = embedder.fit_transform(kg, walker)
-#     entity_to_id = {entity: idx for idx, entity in enumerate(kg._entities)}
-#     return embeddings, entity_to_id
+def rdf2vec_embeddings(triples, params, dimension):
+    # Create a dictionary of entities
+    entities = set()
+    for s, p, o in triples:
+        entities.add(s)
+        entities.add(o)
+
+    # Create walks
+    walks = []
+    for _ in range(params['walks_per_node']):
+        for entity in entities:
+            walk = [entity]
+            current = entity
+            for _ in range(params['depth']):
+                neighbors = [t[2] for t in triples if t[0] == current]
+                if neighbors:
+                    next_entity = random.choice(neighbors)
+                    walk.append(next_entity)
+                    current = next_entity
+                else:
+                    break
+            walks.append(walk)
+
+    # Train Word2Vec model
+    model = Word2Vec(walks, vector_size=dimension, window=params['window'], sg=1, hs=0, negative=5, min_count=1, workers=4)
+    embeddings = {entity: model.wv[entity] for entity in entities if entity in model.wv}
+    entity_to_id = {entity: idx for idx, entity in enumerate(entities)}
+
+    # Convert embeddings to numpy array
+    embeddings_array = np.array([embeddings[entity] if entity in embeddings else np.zeros(dimension) for entity in entities])
+
+    return embeddings_array, entity_to_id
+
+params_kidney = {
+    "kidney_snomed": {"depth": 10, "walks_per_node": 100, "window": 7}
+}
+params_heart_rdf2vec = {
+    "heart_small": {"depth": 4, "walks_per_node": 100, "window": 5},
+    "heart_extended": {"depth": 6, "walks_per_node": 150, "window": 10},
+    "heart_snomed": {"depth": 5, "walks_per_node": 100, "window": 7}
+}
+
+params_heart_node2vec = {
+    "heart_small": {"dimensions": 64, "walk_length": 40, "num_walks": 200, "window": 5},
+    "heart_extended": {"dimensions": 128, "walk_length": 60, "num_walks": 200, "window": 10},
+    "heart_snomed": {"dimensions": 100, "walk_length": 50, "num_walks": 200, "window": 7}
+}
+def plot_tsne(embeddings, labels, title='t-SNE Embeddings'):
+    tsne = TSNE(n_components=2, random_state=42)
+    tsne_results = tsne.fit_transform(embeddings)
+
+    plt.figure(figsize=(10, 8))
+    sns.scatterplot(
+        x=tsne_results[:, 0], y=tsne_results[:, 1],
+        hue=labels,
+        palette=sns.color_palette("hsv", len(set(labels))),
+        legend="full",
+        alpha=0.7
+    )
+    plt.title(title)
+    plt.xlabel('t-SNE component 1')
+    plt.ylabel('t-SNE component 2')
+    plt.legend(loc='best')
+    # plt.show()
+    # Save the plot
+    plt.savefig(f"{title}.png")
+    plt.close()
+
+def apply_tsne(X_train, X_test):
+    tsne = TSNE(n_components=2, random_state=42)
+    X_train_reduced = tsne.fit_transform(X_train)
+    X_test_reduced = tsne.fit_transform(X_test)
+    return X_train_reduced, X_test_reduced
 #
-# # Parameters for RDF2Vec
-# # params_1 = {
-# #     "kidney_snomed": {"depth": 5, "walks_per_node": 15, "window": 7}
-# # }
-# params_kidney = {
-#     "kidney_snomed": {"depth": 10, "walks_per_node": 100, "window": 7}
-# }
-# params_heart_rdf2vec = {
-#     "heart_small": {"depth": 4, "walks_per_node": 100, "window": 5},
-#     "heart_extended": {"depth": 6, "walks_per_node": 150, "window": 10},
-#     "heart_snomed": {"depth": 5, "walks_per_node": 100, "window": 7}
-# }
-#
-# params_heart_node2vec = {
-#     "heart_small": {"dimensions": 64, "walk_length": 40, "num_walks": 200, "window": 5},
-#     "heart_extended": {"dimensions": 128, "walk_length": 60, "num_walks": 200, "window": 10},
-#     "heart_snomed": {"dimensions": 100, "walk_length": 50, "num_walks": 200, "window": 7}
-# }
-#
-# #
-# def node2vec_embeddings(triples, params, dimension):
-#     G = nx.Graph()
-#     for subj, pred, obj in triples:
-#         G.add_edge(subj, obj)
-#     n2v = N2V(G, dimensions=dimension, walk_length=10, num_walks=100, workers=4)
-#     model = n2v.fit(window=10, min_count=1, batch_words=4)
-#     embeddings = np.array([model.wv[str(node)] for node in G.nodes()])
-#     entity_to_id = {str(node): idx for idx, node in enumerate(G.nodes())}
-#     return embeddings, entity_to_id
+def node2vec_embeddings(triples, params, dimension):
+    G = nx.Graph()
+    for subj, pred, obj in triples:
+        G.add_edge(subj, obj)
+    n2v = N2V(G, dimensions=dimension, walk_length=10, num_walks=100, workers=4)
+    model = n2v.fit(window=10, min_count=1, batch_words=4)
+    embeddings = np.array([model.wv[str(node)] for node in G.nodes()])
+    entity_to_id = {str(node): idx for idx, node in enumerate(G.nodes())}
+    return embeddings, entity_to_id
 
 
 def create_model(input_dim):
@@ -214,7 +313,7 @@ models_with_params = initialize_models_with_params()
 def create_combined_triples_factory(triples, train_uris, test_uris):
     combined_uris = np.unique(np.concatenate((train_uris, test_uris)))
     combined_triples = triples[np.isin(triples[:, 0], combined_uris)]
-    print(f"combined_uris: {combined_uris}")
+    # print(f"combined_uris: {combined_uris}")
     combined_triples_factory = TriplesFactory.from_labeled_triples(combined_triples)
     return combined_triples_factory
 
@@ -224,6 +323,7 @@ def filter_triples_test(triples, patient_prefix, predicate_to_match):
         if not (subj.startswith(patient_prefix) and pred == predicate_to_match):
             filtered_triples.append((subj, pred, obj))
     return np.array(filtered_triples, dtype=object)
+
 
 def train_and_evaluate(models_with_params, Xs, y, ontology, triples, base_uri, checkpoint_dir, vector_size):
     results_list = []
@@ -241,15 +341,16 @@ def train_and_evaluate(models_with_params, Xs, y, ontology, triples, base_uri, c
                 combined_triples_factory = create_combined_triples_factory(triples, train_uris, test_uris)
                 entity_to_id = combined_triples_factory.entity_to_id
 
-                train_triples = combined_triples_factory.triples[
-                    np.isin(combined_triples_factory.triples[:, 0], train_uris)]
-                test_triples = combined_triples_factory.triples[
-                    np.isin(combined_triples_factory.triples[:, 0], test_uris)]
+                train_triples = combined_triples_factory.triples[np.isin(combined_triples_factory.triples[:, 0], train_uris)]
+                test_triples = combined_triples_factory.triples[np.isin(combined_triples_factory.triples[:, 0], test_uris)]
                 train_triples_factory = TriplesFactory.from_labeled_triples(train_triples)
 
                 patient_prefix = f"{base_uri}#Patient_"
-                # predicate_to_match = f"{base_uri}#hasHeartDisease"
-                predicate_to_match = f"{base_uri}#hasKidneyDisease"
+
+                if domain == "kidney":
+                    predicate_to_match = f"{base_uri}#hasKidneyDisease"
+                elif domain =="heart":
+                    predicate_to_match = f"{base_uri}#hasHeartDisease"
 
                 test_triples_factory = TriplesFactory.from_labeled_triples(test_triples)
                 filtered_test_triples = filter_triples_test(test_triples, patient_prefix, predicate_to_match)
@@ -269,29 +370,61 @@ def train_and_evaluate(models_with_params, Xs, y, ontology, triples, base_uri, c
                     DistMult, dimension=vector_size, triples_factory_train=test_triples_factory,
                     triples_factory_test=filtered_test_triples_factory)
 
-                # # Generate RDF2Vec and Node2Vec embeddings
-                # embeddings_rdf2vec_train, entity_to_id_rdf2vec_train = rdf2vec_embeddings(train_triples, param=params_heart_rdf2vec, dimension=vector_size)
-                # embeddings_rdf2vec_test, entity_to_id_rdf2vec_test = rdf2vec_embeddings(test_triples, param=params_heart_rdf2vec, dimension=vector_size)
-                # embeddings_node2vec_train, entity_to_id_node2vec_train = node2vec_embeddings(train_triples, params_heart_node2vec,dimension=vector_size)
-                # embeddings_node2vec_test, entity_to_id_node2vec_test = node2vec_embeddings(test_triples, param=params_heart_node2vec, dimension=128)
+                # Add autoencoder embeddings
+                autoencoder_input_dim = vector_size  # Set this to your actual input dimension
+                autoencoder_hidden_dim = 50  # Example hidden dimension
+                autoencoder_output_dim = vector_size  # Set this to your desired output dimension
+                embeddings_autoencoder_train, entity_to_id_autoencoder_train = autoencoder_embeddings(
+                    train_triples, autoencoder_input_dim, autoencoder_hidden_dim, autoencoder_output_dim, train_uris)
+                embeddings_autoencoder_test, entity_to_id_autoencoder_test = autoencoder_embeddings(
+                    filtered_test_triples, autoencoder_input_dim, autoencoder_hidden_dim, autoencoder_output_dim, test_uris)
+
+                embeddings_rdf2vec_train, entity_to_id_rdf2vec_train = rdf2vec_embeddings(
+                    train_triples, params_heart_rdf2vec[ontology], vector_size)
+                embeddings_rdf2vec_test, entity_to_id_rdf2vec_test = rdf2vec_embeddings(
+                    filtered_test_triples, params_heart_rdf2vec[ontology], vector_size)
+
+                embeddings_node2vec_train, entity_to_id_node2vec_train = node2vec_embeddings(
+                    train_triples, params_heart_node2vec[ontology], vector_size)
+                embeddings_node2vec_test, entity_to_id_node2vec_test = node2vec_embeddings(
+                    filtered_test_triples, params_heart_node2vec[ontology], vector_size)
 
                 embedding_methods = {
-                    'TransH': (embeddings_transh_train, entity_to_id_transh_train, embeddings_transh_test,
-                               entity_to_id_transh_test),
-                    'DistMult': (embeddings_distmult_train, entity_to_id_distmult_train, embeddings_distmult_test,
-                                 entity_to_id_distmult_test),
-                    # 'RDF2Vec': (embeddings_rdf2vec_train, entity_to_id_rdf2vec_train, embeddings_rdf2vec_test,
-                    #             entity_to_id_rdf2vec_test),
-                    # 'Node2Vec': (embeddings_node2vec_train, entity_to_id_node2vec_train, embeddings_node2vec_test,
-                    #              entity_to_id_node2vec_test)
+                    'TransH': (embeddings_transh_train, entity_to_id_transh_train, embeddings_transh_test, entity_to_id_transh_test),
+                    'DistMult': (embeddings_distmult_train, entity_to_id_distmult_train, embeddings_distmult_test, entity_to_id_distmult_test),
+                    'Autoencoder': (embeddings_autoencoder_train, entity_to_id_autoencoder_train, embeddings_autoencoder_test, entity_to_id_autoencoder_test),
+                    'RDF2Vec': (embeddings_rdf2vec_train, entity_to_id_rdf2vec_train, embeddings_rdf2vec_test,
+                                entity_to_id_rdf2vec_test),
+                    'Node2Vec': (embeddings_node2vec_train, entity_to_id_node2vec_train, embeddings_node2vec_test,
+                                 entity_to_id_node2vec_test)
+
                 }
 
-            for method_name, (embeddings_train, entity_to_id_train, embeddings_test, entity_to_id_test) in embedding_methods.items():
-                    train_indices = [entity_to_id_train[uri] for uri in train_uris if uri in entity_to_id_train]
-                    test_indices = [entity_to_id_test[uri] for uri in test_uris if uri in entity_to_id_test]
+                for method_name, (embeddings_train, entity_to_id_train, embeddings_test, entity_to_id_test) in embedding_methods.items():
+                    train_indices = [entity_to_id_train.get(uri) for uri in train_uris if uri in entity_to_id_train]
+                    test_indices = [entity_to_id_test.get(uri) for uri in test_uris if uri in entity_to_id_test]
+
+                    # Check if embeddings are empty
+                    if not train_indices or not test_indices:
+                        print(f"Warning: Empty embeddings for {method_name} method")
+                        continue
 
                     train_embeddings = embeddings_train[train_indices]
                     test_embeddings = embeddings_test[test_indices]
+
+                    # Plot t-SNE for training embeddings
+                    # plot_tsne(train_embeddings, y_train_filtered, title=f't-SNE for Training Embeddings - {method_name}')
+
+
+
+                    # Additional check for empty embeddings
+                    if len(train_embeddings) == 0 or len(test_embeddings) == 0:
+                        print(f"Warning: No embeddings found for {method_name} method")
+                        continue
+
+                    if train_embeddings.size == 0 or test_embeddings.size == 0:
+                        print(f"Warning: No embeddings found for {method_name} method")
+                        continue
 
                     valid_train_indices = [i for i, uri in zip(train_index, train_uris) if uri in entity_to_id]
                     valid_test_indices = [i for i, uri in zip(test_index, test_uris) if uri in entity_to_id]
@@ -319,13 +452,59 @@ def train_and_evaluate(models_with_params, Xs, y, ontology, triples, base_uri, c
                     X_train_combined_fe = np.concatenate((X_train_combined, X_train_fe), axis=1)
                     X_test_combined_fe = np.concatenate((X_test_combined, X_test_fe), axis=1)
 
+                    X_train_tab_fe = np.concatenate((X_train,X_train_fe), axis=1)
+                    X_test_tab_fe = np.concatenate((X_test,X_test_fe), axis=1)
+
+                    # Apply t-SNE
+                    X_train_emb_only_tsne, X_test_emb_only_tsne = apply_tsne(train_embeddings, test_embeddings)
+                    X_train_combined_tsne, X_test_combined_tsne = apply_tsne(X_train_combined, X_test_combined)
+                    X_train_combined_fe_tsne, X_test_combined_fe_tsne = apply_tsne(X_train_combined_fe,
+                                                                                   X_test_combined_fe)
+
+                    # Cluster embeddings
+                    n_clusters = 10  # Example number of clusters
+                    kmeans = KMeans(n_clusters=n_clusters, random_state=42)
+                    train_clusters = kmeans.fit_predict(train_embeddings)
+                    test_clusters = kmeans.predict(test_embeddings)
+
+                    X_train_clustered = np.hstack((X_train_combined, train_clusters.reshape(-1, 1)))
+                    X_test_clustered = np.hstack((X_test_combined, test_clusters.reshape(-1, 1)))
+
+                    print(f"train_clusters shape: {X_train_clustered.shape}")
+                    print(f"test_clusters shape: {X_test_clustered.shape}")
+
+                    # Create interaction terms
+                    interaction_terms_train = np.hstack(
+                        [X_train_filtered * emb.reshape(-1, 1) for emb in train_embeddings.T])
+                    interaction_terms_test = np.hstack(
+                        [X_test_filtered * emb.reshape(-1, 1) for emb in test_embeddings.T])
+
+                    X_train_interaction = np.hstack((X_train_combined, interaction_terms_train))
+                    X_test_interaction = np.hstack((X_test_combined, interaction_terms_test))
+
+                    print(f"X_train_interaction shape: {X_train_interaction.shape}")
+                    print(f"X_test_interaction shape: {X_test_interaction.shape}")
+
                     scenarios = {
                         'Baseline': (X_train, X_test),
                         f'{method_name} Only': (train_embeddings, test_embeddings),
+                        f'{method_name} Only + t-SNE': (X_train_emb_only_tsne, X_test_emb_only_tsne),
                         f'{method_name} + Tabular': (X_train_combined, X_test_combined),
-                        f'{method_name} FE Only': (X_train_fe, X_test_fe),
+                        f'{method_name} + Tabular + t-SNE': (X_train_combined_tsne, X_test_combined_tsne),
+                        f'{method_name} Tabular + FE Only': (X_train_tab_fe, X_test_tab_fe),
                         f'{method_name} + Tabular + FE': (X_train_combined_fe, X_test_combined_fe),
+                        f'{method_name} + Tabular + FE + t-SNE': (X_train_combined_fe_tsne, X_test_combined_fe_tsne),
+                        f'{method_name} Clustered': (X_train_clustered, X_test_clustered),
+                        f'{method_name} Interaction': (X_train_interaction, X_test_interaction),
                     }
+
+                    # scenarios = {
+                    #     'Baseline': (X_train, X_test),
+                    #     f'{method_name} Only': (train_embeddings, test_embeddings),
+                    #     f'{method_name} + Tabular': (X_train_combined, X_test_combined),
+                    #     f'{method_name} Tabular + FE Only': (X_train_tab_fe, X_test_tab_fe),
+                    #     f'{method_name} + Tabular + FE': (X_train_combined_fe, X_test_combined_fe),
+                    # }
 
                     for scenario_name, (X_train_final, X_test_final) in scenarios.items():
                         if model_name == 'NN':
@@ -368,7 +547,7 @@ def train_and_evaluate(models_with_params, Xs, y, ontology, triples, base_uri, c
                         })
                     # Save results after each fold
                     results_df = pd.DataFrame(results_list)
-                    results_df.to_csv(os.path.join(checkpoint_dir, f'{ontology}_intermediate_results.csv'),index=False)
+                    results_df.to_csv(os.path.join(checkpoint_dir, f'{ontology}_intermediate_results_tsne.csv'),index=False)
 
     return results_list
 
@@ -389,11 +568,11 @@ for ontology in ontologies:
         results_df = pd.DataFrame(results_list)
         results_dir = os.path.join('results_fine_tuned', domain, str(vector_size))
         os.makedirs(results_dir, exist_ok=True)
-        results_file_path = os.path.join(results_dir, f'{ontology}/evaluation_results.csv')
+        results_file_path = os.path.join(results_dir, f'{ontology}/evaluation_results_tsne.csv')
         if not os.path.exists(results_file_path):
             with open(results_file_path, 'w') as f:
                 pass  # Create the file if it does not exist
-        results_df.to_csv(os.path.join(results_dir, f'{ontology}/evaluation_results.csv'), index=False)
+        results_df.to_csv(os.path.join(results_dir, f'{ontology}/evaluation_results_tsne.csv'), index=False)
     #
     # triples_factory = TriplesFactory.from_labeled_triples(triples)
     # checkpoint_dir = os.path.join('results_fine_tuned', 'heart', '128', 'checkpoints')
@@ -404,8 +583,11 @@ for ontology in ontologies:
     # results_df = pd.DataFrame(results_list)
     # results_dir = os.path.join('results_fine_tuned', 'heart', vector_size)
     # os.makedirs(results_dir, exist_ok=True)
-    # results_df.to_csv(os.path.join(results_dir, f'{ontology}/evaluation_results.csv'), index=False)
+    # results_df.to_csv(os.path.join(results_dir, f'{ontology}/evaluation_results_batch_size_128.csv'), index=False)
 
 # Save all results
 #         all_results_df = pd.DataFrame(all_results_list)
 #         all_results_df.to_csv(os.path.join('results_fine_tuned', 'heart', vector_size, 'all_ontologies_evaluation_results.csv'), index=False)
+
+
+# Function to plot t-SNE embeddings

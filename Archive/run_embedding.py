@@ -389,4 +389,4 @@ all_results_df.to_csv(os.path.join('results_fine_tuned', 'heart', '128', 'all_on
 # results_df = pd.DataFrame(results_list)
 # results_dir = os.path.join('results_fine_tuned', 'heart', '128')
 # os.makedirs(results_dir, exist_ok=True)
-# results_df.to_csv(os.path.join(results_dir, f'{ontology}/evaluation_results.csv'), index=False)
+# results_df.to_csv(os.path.join(results_dir, f'{ontology}/evaluation_results_batch_size_128.csv'), index=False)

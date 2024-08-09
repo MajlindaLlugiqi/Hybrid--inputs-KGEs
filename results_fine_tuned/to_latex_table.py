@@ -1,7 +1,6 @@
 import pandas as pd
 import os
 
-
 def calculate_averages(data, score_cols):
     """
     Calculate averages for given score columns, excluding rows where F2 score is 0.
@@ -9,21 +8,16 @@ def calculate_averages(data, score_cols):
     average_scores = data.groupby(['Model', "Scenario"])[score_cols].mean().reset_index()
     return average_scores
 
-# param_sett = "params_2"
-# onto_names = ["kidney_snomed"]
-onto_names = ["heart_small","heart_extended","heart_snomed"]
+# List of ontology names
+onto_names = ["heart_snomed"]
 
 domain = "heart"
-# onto_type = "heart_small"
-vector_sizes = [100]
-size= 100
-    # , 128, 100]
+vector_sizes = [64]
 score_cols = ['Accuracy', 'F1_Score', 'Precision', 'Recall', 'F2_Score']
 aggregated_data = {onto_name: pd.DataFrame() for onto_name in onto_names}
-transpose_table = True  # Set this to True to transpose the table
+transpose_table = False  # Set this to False to keep the table as required
 
-method_names = ["TransH", "DistMult"]
-# , "RDF2Vec"]
+method_names = ["TransH", "DistMult", "Autoencoder", "RDF2Vec", "Node2Vec"]
 
 feature_set_order = ['Baseline']
 
@@ -36,11 +30,10 @@ for method_name in method_names:
 
 print(feature_set_order)
 
-
 for onto_name in onto_names:
     temp_data_list = []
     for vector_size in vector_sizes:
-        file_path = f'{domain}/{vector_size}/{onto_name}/evaluation_results.csv'
+        file_path = f'{domain}/{vector_size}/checkpoints/heart_snomed_intermediate_results.csv'
         if os.path.exists(file_path):
             data = pd.read_csv(file_path)
             average_scores = calculate_averages(data, score_cols)
@@ -64,10 +57,10 @@ for onto_name, data in aggregated_data.items():
                 pivot_df = data.pivot(index='Scenario', columns='Model', values=score).T.reset_index()
                 column_order = ['Model'] + feature_set_order
             else:
-                pivot_df = data.pivot(index='Model', columns='Scenario', values=score).reset_index()
-                column_order = ['Model'] + feature_set_order
+                pivot_df = data.pivot(index='Scenario', columns='Model', values=score).reset_index()
+                column_order = ['Scenario'] + list(data['Model'].unique())
 
-            # Ensure all colum ns in your order exist in the DataFrame, to avoid KeyError
+            # Ensure all columns in your order exist in the DataFrame, to avoid KeyError
             column_order = [col for col in column_order if col in pivot_df.columns]
 
             pivot_df = pivot_df.reindex(columns=column_order)
@@ -77,5 +70,5 @@ for onto_name, data in aggregated_data.items():
 
             latex_table = pivot_df.to_latex(index=False, na_rep='-')
             print(f"dir {dir_path}")
-            with open(f'{dir_path}latex_table_averages_{score}_{size}.tex', 'w') as file:
+            with open(f'{dir_path}latex_table_averages_{score}_{vector_sizes[0]}_new.tex', 'w') as file:
                 file.write(latex_table)
